@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-  <link rel="stylesheet" href="./public/assets/styles/index.css">
 
-</head>
-<body>
-  
-<div class="sidebar">
-  <div class="logo-details">
+
+export function sidebar() {
+
+    const sidebarContent = `  <div class="logo-details">
     <img class="bx bxl-c-plus-plus icon" src="./public/assets/img/Logo verde-blanco.svg" alt="">
     <i class='bx bx-menu-alt-right' id="btn"></i>
     </div>
@@ -67,25 +59,32 @@
       <span class="tooltip">Certificates</span>
     </li>
     
-    </ul>
- 
-</div>
+    </ul>`
+
+
+    // Obtener elementos del DOM
+    const sidebar = document.querySelector(".sidebar");
+    const closeBtn = document.querySelector("#btn");
+
+    // sidebar.innerHTML = sidebarContent
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        BtnChange(); 
+    });
+
+    // Función para cambiar el icono del botón
+    function BtnChange() {
+        if (sidebar.classList.contains("open")) {
+            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); 
+        } else {
+            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+    }
 
 
 
-<section class="home-section">
-  <div class="text">Dashboard</div>
-</section>
 
-
-
- <script type="module"  src="./src/js/app.js"></script>
-
-
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-</html>
+    // Llamar a BtnChange inicialmente para asegurarse de que el botón tenga el estado correcto al inicio
+    BtnChange();
+}
