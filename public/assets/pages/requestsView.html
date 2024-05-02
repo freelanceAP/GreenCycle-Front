@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/assets/styles/requestView.css" />
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <title>Requests</title>
   </head>
   <body class="bg-gray-200">
-    <div class="px-4 pt-4">
+    <div class="px-7 pt-4">
       <h2 class="text-2xl font-bold">Clients Requests</h2>
     </div>
-    <div class="h-[100vh] grid grid-cols-2 gap-4 p-4">
+    <div class=" grid grid-cols-2 gap-4 p-4">
       <div class="min-h-44 max-h-80 col-span-1 bg-white rounded-lg p-4 shadow-md">
         <table class="w-full">
           <thead class="border-b-2 border-gray-200">
@@ -79,14 +79,107 @@
                 </div>
               </td>
             </tr>
+            <tr>
+              <td class="p-3 text-sm text-gray-700 flex items-center gap-2">
+                <div class="overflow-hidden rounded-full w-10 h-10">
+                  <img
+                    src="/public/assets/img/client-pics-04.png"
+                    alt="Client picture"
+                    class="object-cover"
+                  />
+                </div>
+                <div>
+                  <a href="#" class="font-bold text-indigo-950">Lorem Ipsum</a>
+                  <h4 class="text-xs font-light">Enterprise</h4>
+                </div>
+              </td>
+
+              <td class="p-3 text-sm text-gray-700">01/05/2024</td>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm">
+                <div class="flex gap-2">
+                  <div>
+                    <button
+                      class="bg-green-500 w-7 h-7 rounded-full flex items-center justify-center"
+                    >
+                      <box-icon
+                        type="solid"
+                        name="check-circle"
+                        color="white"
+                        size="20px"
+                      ></box-icon>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-indigo-950 w-7 h-7 rounded-full flex items-center justify-center"
+                    >
+                      <box-icon
+                        type="solid"
+                        name="x-circle"
+                        color="white"
+                        size="20px"
+                      ></box-icon>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 text-sm text-gray-700 flex items-center gap-2">
+                <div class="overflow-hidden rounded-full w-10 h-10">
+                  <img
+                    src="/public/assets/img/client-pics-03.png"
+                    alt="Client picture"
+                    class="object-cover"
+                  />
+                </div>
+                <div>
+                  <a href="#" class="font-bold text-indigo-950">Lorem Ipsum</a>
+                  <h4 class="text-xs font-light">Enterprise</h4>
+                </div>
+              </td>
+
+              <td class="p-3 text-sm text-gray-700">01/05/2024</td>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm">
+                <div class="flex gap-2">
+                  <div>
+                    <button
+                      class="bg-green-500 w-7 h-7 rounded-full flex items-center justify-center"
+                    >
+                      <box-icon
+                        type="solid"
+                        name="check-circle"
+                        color="white"
+                        size="20px"
+                      ></box-icon>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-indigo-950 w-7 h-7 rounded-full flex items-center justify-center"
+                    >
+                      <box-icon
+                        type="solid"
+                        name="x-circle"
+                        color="white"
+                        size="20px"
+                      ></box-icon>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <div class="h-86 col-span-1 bg-white rounded-lg shadow-md"></div>
-      <div class="px-1 pt-4">
-        <h2 class="text-2xl font-bold">Recent Requests</h2>
+      <div class="min-h-64 max-h-80 col-span-1 bg-white rounded-lg shadow-md"></div>
+      <div class="max-h-10 px-5">
+        <h2 class="flex text-2xl font-bold">Recent Requests</h2>
       </div>
-      <div class="h-80 col-span-2 bg-white rounded-lg shadow-md">
+      <div class="min-h-44 max-h-80 min-w-96 col-span-2 bg-white rounded-lg shadow-md">
+        <div class="px-5">
         <table class="w-full">
           <thead class="border-b-2 border-gray-200">
             <tr>
@@ -124,11 +217,41 @@
                 <span class="inline-block w-16 bg-indigo-950 text-white text-center px-2 py-1 rounded">Closed</span>
               </td>
             </tr>
+            <tr>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm text-gray-700">
+                <div>
+                  <a href="#" class="font-bold text-indigo-950">#010002</a>
+                </div>
+              </td>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm text-gray-700">02 May, 08:30 AM</td>
+              <td class="p-3 text-sm">
+                <span class="inline-block w-16 bg-green-500 text-white text-center px-2 py-1 rounded">Open</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm text-gray-700">
+                <div>
+                  <a href="#" class="font-bold text-indigo-950">#010002</a>
+                </div>
+              </td>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm text-gray-700">02 May, 08:30 AM</td>
+              <td class="p-3 text-sm">
+                <span class="inline-block w-16 bg-indigo-950 text-white text-center px-2 py-1 rounded">Closed</span>
+              </td>
+            </tr>
             
           </tbody>
         </table>
+      </div>
          
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="/src/js/app.js"></script>
   </body>
 </html>
