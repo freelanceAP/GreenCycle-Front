@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/assets/styles/requestView.css" />
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Requests</title>
+  </head>
+  <body class="bg-gray-200">
+    <div class="px-4 pt-4">
+      <h2 class="text-2xl font-bold">Clients Requests</h2>
+    </div>
+    <div class="h-[100vh] grid grid-cols-2 gap-4 p-4">
+      <div class="min-h-44 max-h-80 col-span-1 bg-white rounded-lg p-4 shadow-md">
+        <table class="w-full">
+          <thead class="border-b-2 border-gray-200">
+            <tr>
+              <th class="px-3 text-sm font-semibold tracking-wide text-left">
+                Client
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Date
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Details
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 text-sm text-gray-700 flex items-center gap-2">
+                <div class="overflow-hidden rounded-full w-10 h-10">
+                  <img
+                    src="/public/assets/img/client-pics-01.png"
+                    alt="Client picture"
+                    class="object-cover"
+                  />
+                </div>
+                <div>
+                  <a href="#" class="font-bold text-indigo-950">Lorem Ipsum</a>
+                  <h4 class="text-xs font-light">Enterprise</h4>
+                </div>
+              </td>
+
+              <td class="p-3 text-sm text-gray-700">01/05/2024</td>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm">
+                <div class="flex gap-2">
+                  <div>
+                    <button
+                      class="bg-green-500 w-7 h-7 rounded-full flex items-center justify-center"
+                    >
+                      <box-icon
+                        type="solid"
+                        name="check-circle"
+                        color="white"
+                        size="20px"
+                      ></box-icon>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-indigo-950 w-7 h-7 rounded-full flex items-center justify-center"
+                    >
+                      <box-icon
+                        type="solid"
+                        name="x-circle"
+                        color="white"
+                        size="20px"
+                      ></box-icon>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="h-86 col-span-1 bg-white rounded-lg shadow-md"></div>
+      <div class="px-1 pt-4">
+        <h2 class="text-2xl font-bold">Recent Requests</h2>
+      </div>
+      <div class="h-80 col-span-2 bg-white rounded-lg shadow-md">
+        <table class="w-full">
+          <thead class="border-b-2 border-gray-200">
+            <tr>
+              <th class="px-3 text-sm font-semibold tracking-wide text-left">
+                Client
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Request ID
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Details
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Date
+              </th>
+              <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm text-gray-700">
+                <div>
+                <a href="#" class="font-bold text-indigo-950">#010001</a>
+              </div>
+            </td>
+              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-sm text-gray-700">02 May, 08:30 AM</td>
+              <td class="p-3 text-sm text-white bg-green-500 rounded-lg px-5 py-2.5 me-2 mb-2">Open</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+  </body>
+</html>
