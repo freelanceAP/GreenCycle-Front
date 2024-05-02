@@ -64,9 +64,11 @@ export function sidebar() {
 
     // Obtener elementos del DOM
     const sidebar = document.querySelector(".sidebar");
-    const closeBtn = document.querySelector("#btn");
+    
 
-    // sidebar.innerHTML = sidebarContent
+    sidebar.innerHTML = sidebarContent
+
+    const closeBtn = document.querySelector("#btn");
 
     closeBtn.addEventListener("click", () => {
         sidebar.classList.toggle("open");
