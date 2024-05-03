@@ -13,53 +13,57 @@
 
 <body>
 
-  <nav class="navbar  bg-white h-16 px-4 flex items-center justify-between ">
-
-    <!-- Titulo -->
-    <div class="text-indigo-950 text-lg ml-36">Administrador</div>
-
-    <div class="flex">
-      <!-- Buscar e iconos-->
-      <div class="flex justify-between py-3 px-6 ">
-
-        <form action="">
-          <ion-icon name="search"></ion-icon>
-          <input type="text" name="search" placeholder="Search for something" autocomplete="off"
-            aria-invalid="Search for something"
-            class="px-3 py-2 rounded-2xl border-no ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2">
-        </form>
-      </div>
-
-
-      <div class="flex items-center">
-        <label for="busqueda" class="sr-only">Buscar</label>
-        <ion-icon name="construct" class=" text-gray-600 text-2xl"></ion-icon>
-        <ion-icon name="notifications" class="text-gray-600 text-2xl"></ion-icon>
-        <!-- <i class="fas fa-bell text-gray-600 ml-4"></i> -->
-        <!-- <i class="fas fa-cog text-gray-600 ml-4"></i> -->
-      </div>
-
-      <!-- Foto de perfil -->
-      <div class="mr-4">
-        <img src="ruta/a/tu/foto-de-perfil.jpg" alt="Foto de perfil" class="w-10 h-10 rounded-full">
-      </div>
-
-      <!-- Nombre de usuario y rol -->
-      <div>
-        <div class="font-semibold">Nombre de Usuario</div>
-        <div class="text-sm text-gray-500">Admini</div>
-      </div>
-    </div>
-  </nav>
-
   <div class="sidebar">
 
   </div>
 
 
+  <section class="home-section bg-slate-200">
+    <nav class="navbar  bg-white h-20  px-4 flex items-center justify-between ">
 
-  <section class="home-section bg-slate-100">
-    <div class="text">Dashboard</div>
+      <!-- Titulo -->
+      <div class="text-indigo-950 text-2xl  ml-14 font-semibold">Administration</div>
+
+      <div class="flex">
+        <!-- Buscar-->
+        <!-- <div class="flex justify-between py-3 px-6 ">
+          <form action="">
+            <div class="relative flex items-center text-gray-400 focus-within:text-gray-600">
+              <ion-icon name="search" class="absolute ml-3"></ion-icon>
+              <input type="text" name="search" placeholder="Search for something" autocomplete="off"
+                aria-invalid="Search for something"
+                class="pr-3 pl-10 py-2 rounded-2xl border-no ring-2 font-bold ring-gray-300 focus:ring-gray-500 focus:ring-2 bg-slate-200">
+            </div>
+          </form>
+        </div> -->
+
+        <div class="flex gap-4 items-center">
+
+          <!-- Iconos-->
+          <div class="p-2  rounded-full bg-slate-200 flex justify-center align-middle">
+            <ion-icon name="construct" class=" text-[#0E0E42] text-2xl "></ion-icon>
+          </div>
+          <div class="p-2  rounded-full bg-slate-200 flex justify-center align-middle">
+            <ion-icon name="notifications" class=" text-[#0E0E42] text-2xl "></ion-icon>
+          </div>
+
+          <!-- Foto de perfil -->
+          <div class="size-11 flex justify-center align-middle">
+            <img src="/public/assets/img/client-pics-05.png" class="w-full h-full rounded-full ">
+          </div>
+
+          <!-- Nombre de usuario y rol -->
+          <div class=" flex flex-col justify-center items-center ">
+            <div class="font-semibold ">User Name</div>
+            <div class="text-sm text-gray-500 self-start">Admini</div>
+          </div>
+        </div>
+    </nav>
+
+
+    <div class="text">Dashboard
+
+    </div>
   </section>
 
 
