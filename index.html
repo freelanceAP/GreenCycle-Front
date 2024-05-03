@@ -1,33 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   <link rel="stylesheet" href="./public/assets/styles/index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
+
 <body>
-  
-<div class="navbar">
-    
-</div>
-<div class="sidebar">
-  
-</div>
+
+  <nav class="navbar  bg-white h-16 px-4 flex items-center justify-between ">
+
+    <!-- Titulo -->
+    <div class="text-indigo-950 text-lg ml-36">Administrador</div>
+
+    <div class="flex">
+      <!-- Buscar e iconos-->
+      <div class="flex justify-between py-3 px-6 ">
+
+        <form action="">
+          <ion-icon name="search"></ion-icon>
+          <input type="text" name="search" placeholder="Search for something" autocomplete="off"
+            aria-invalid="Search for something"
+            class="px-3 py-2 rounded-2xl border-no ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2">
+        </form>
+      </div>
+
+
+      <div class="flex items-center">
+        <label for="busqueda" class="sr-only">Buscar</label>
+        <ion-icon name="construct" class=" text-gray-600 text-2xl"></ion-icon>
+        <ion-icon name="notifications" class="text-gray-600 text-2xl"></ion-icon>
+        <!-- <i class="fas fa-bell text-gray-600 ml-4"></i> -->
+        <!-- <i class="fas fa-cog text-gray-600 ml-4"></i> -->
+      </div>
+
+      <!-- Foto de perfil -->
+      <div class="mr-4">
+        <img src="ruta/a/tu/foto-de-perfil.jpg" alt="Foto de perfil" class="w-10 h-10 rounded-full">
+      </div>
+
+      <!-- Nombre de usuario y rol -->
+      <div>
+        <div class="font-semibold">Nombre de Usuario</div>
+        <div class="text-sm text-gray-500">Admini</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidebar">
+
+  </div>
 
 
 
-<section class="home-section">
-  <div class="text">Dashboard</div>
-</section>
+  <section class="home-section bg-slate-100">
+    <div class="text">Dashboard</div>
+  </section>
 
 
 
-  <script type="module"  src="./src/js/app.js"></script>
+  <script type="module" src="./src/js/app.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 </body>
+
 </html>
