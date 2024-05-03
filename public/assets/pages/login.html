@@ -51,14 +51,71 @@
       </div>
       <div class="mt-6 gap-2 flex justify-center items-center text-sm">
         <div class="text-white">
-          <label>Don't have an account?</label>
+          <div
+            class="flex items-center mt-6 bg-white/5 backdrop-blur-xl rounded-lg p-2"
+          >
+            <ion-icon name="person" class="text-white mr-2"></ion-icon>
+            <input
+              type="text"
+              id="username"
+              class="w-full bg-transparent text-base placeholder:text-white outline-none"
+              placeholder="User"
+            />
+          </div>
+          <div
+            class="flex items-center mt-6 bg-white/5 backdrop-blur-xl rounded-lg p-2"
+          >
+            <ion-icon name="lock-closed" class="text-white mr-2"></ion-icon>
+            <input
+              type="password"
+              id="password-input"
+              class="w-full bg-transparent text-base outline-none transparent placeholder:text-white focus:outline-none focus:border-none"
+              placeholder="Password"
+            />
+            <button
+              id="toggle-password"
+              class="ml-2 flex"
+              onclick="togglePassword()"
+            >
+              <ion-icon name="eye-off" class="text-white"></ion-icon>
+            </button>
+          </div>
         </div>
-        <div class="text-indigo-950 font-semibold">
-          <a href="#">Get in touch</a>
+        <div class="mt-6 flex justify-between items-center text-sm">
+          <div class="text-white flex justify-center">
+            <label class="flex items-center cursor-pointer">
+              <input
+                class="accent-indigo-950 focus:outline-none focus:border-none"
+                type="checkbox"
+              />
+              <span class="mx-2">Remember me</span>
+            </label>
+          </div>
+          <div
+            class="text-indigo-950 font-semibold transition transform hover:scale-105"
+          >
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+        <div class="mt-6">
+          <button
+            class="rounded-lg shadow-lg border-indigo-950 bg-indigo-950 text-white py-1 w-full hover:scale-105 transition duration-500 font-medium"
+          >
+            Login
+          </button>
+        </div>
+        <div class="mt-6 gap-2 flex justify-center items-center text-sm">
+          <div class="text-white">
+            <label>Don't have an account?</label>
+          </div>
+          <div
+            class="text-indigo-950 font-semibold transition transform hover:scale-105"
+          >
+            <a href="#">Get in touch</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+    <script src="/src/features/togglePassword.js"></script>
+  </body>
 </html>
