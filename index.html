@@ -1,34 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   <link rel="stylesheet" href="./public/assets/styles/index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
+
 <body>
-  
-<div class="sidebar">
-  
- 
-</div>
+  <div class="sidebar"></div>
 
+  <section class="home-section bg-slate-200">
+    <nav class="navbar bg-white h-20 px-4 flex items-center justify-between">
 
+      <!-- Título -->
+      <div class="text-indigo-950 text-2xl ml-14 font-semibold">Administration</div>
 
-<section class="home-section">
-  <div class="text">Dashboard</div>
-</section>
+      <div class="flex gap-6 items-center"> <!-- Ajuste de espacio uniforme entre elementos -->
 
+        <!-- Formulario de búsqueda -->
+        <div class="flex justify-between">
+          <form action="">
+            <div class="relative flex items-center text-gray-400 focus-within:text-gray-600">
+              <ion-icon name="search" class="absolute ml-3"></ion-icon>
+              <input type="text" name="search" placeholder="Search for something" autocomplete="off"
+                class="pr-3 pl-10 py-2 rounded-full bg-slate-200 outline-none focus:outline-none ring-0 focus:ring-0" />
+            </div>
+          </form>
+        </div>
 
+        <!-- Botón de notificaciones -->
+        <button class="h-10 w-10 rounded-full bg-slate-200 flex justify-center items-center">
+          <ion-icon name="notifications" class="text-indigo-950 text-xl"></ion-icon>
+        </button>
 
- <script type="module"  src="./src/js/app.js"></script>
+        <!-- Sección de perfil con imagen y texto -->
+        <a href="#" class="flex items-center rounded-full px-3">
+          <div class="h-10 w-10 flex justify-center items-center rounded-full">
+            <img src="/public/assets/img/client-pics-05.png" class="w-full h-full rounded-full" alt="Profile Picture" />
+          </div>
 
+          <div class="flex flex-col justify-center ml-2">
+            <h1 class="font-semibold">User Name</h1>
+            <h4 class="text-sm text-gray-500 -mt-1">Admin</h4>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </section>
 
-
+  <script type="module" src="./src/js/app.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 </body>
+
 </html>
