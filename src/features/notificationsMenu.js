@@ -2,7 +2,7 @@ const notificationBtn = document.getElementById("notificationBtn");
 const notificationMenu = document.getElementById("notificationMenu");
 
 notificationBtn.addEventListener("click", () => {
-  notificationMenu.classList.toggle("hidden"); // Alterna la visibilidad del menú
+  notificationMenu.classList.toggle("hidden"); // Change the visibility of the menu
 });
 
 document.addEventListener("click", (e) => {
@@ -10,6 +10,6 @@ document.addEventListener("click", (e) => {
     !notificationBtn.contains(e.target) &&
     !notificationMenu.contains(e.target)
   ) {
-    notificationMenu.classList.add("hidden"); // Cierra el menú al hacer clic fuera
+    notificationMenu.classList.add("hidden"); // Close menu
   }
 });
