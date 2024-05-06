@@ -6,89 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <link rel="stylesheet" href="/public/assets/styles/clients.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="/src/js/app.js"></script>
+    <link rel="stylesheet" href="/public/assets/styles/index.css">
     <title>Client</title>
 </head>
 
 <body class="bg-slate-100">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-        <link rel="stylesheet" href="./public/assets/styles/index.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Client</title>
-    </head>
-
-    <body class="bg-white">
-        <div class="flex justify-center items-center m-6">
-            <table class="w-11/12  rounded-lg overflow-hidden ">
-                <thead class="font-bold text-indigo-950 bg-white">
-                    <tr class="rounded-lg">
-                        <th class="px-3 text-sm font-semibold tracking-wide text-left">
-                            Details
-                        </th>
-                        <th class="px-3 text-sm font-semibold tracking-wide text-left">
-                            Client ID
-                        </th>
-                        <th class="px-3 text-sm font-semibold tracking-wide text-left">
-                            Company
-                        </th>
-                        <th class="px-3 text-sm font-semibold tracking-wide text-left">
-                            Email
-                        </th>
-                        <th class="text-sm tracking-wide">
-                            <button class="px-3 py-2 rounded-full font-medium bg-indigo-950 text-white">
-                                Add new client
-                            </button>
-                        </th>
-
-                        <th class="p-3 text-sm ">
-                            <div class="flex justify-center items-center gap-8">
-                                <button class="bg-white w-8 h-8 rounded-full shadow-md flex justify-center items-center">
-                                    <ion-icon name="search" style="font-size: 16px" class="text-slate-500 text-lg"></ion-icon>
-                                </button>
-                                <button class="bg-white w-8 h-8 rounded-full shadow-md flex justify-center items-center">
-                                    <ion-icon name="filter" style="font-size: 16px" class="text-slate-500 text-lg" ></ion-icon>
-                                </button>
-                            </div>
-                            
-                        </th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr class="bg-white border-b border-gray-100 rounded-t-lg">
-                        <td class="p-3 text-sm text-gray-700 flex items-center gap-2">
-                            <div class="overflow-hidden rounded-full w-10 h-10">
-                                <img src="/public/assets/img/client-pics-01.png" alt="Client picture"
-                                    class="object-cover" />
-                            </div>
-                            <div>
-                                <a href="#" class="font-bold text-indigo-950">Lorem Ipsum</a>
-                                <h4 class="text-xs font-light">Enterprise</h4>
-                            </div>
-                        </td>
-                        <td class="p-3 text-sm text-gray-700 ">#10340</td>
-                        <td class="p-3 text-sm text-gray-700">GreenCycle</td>
-                        <td class="p-3 text-sm text-gray-700">green@cycle.com</td>
-                        <td class="p-3 text-sm text-gray-700"></td>
-                        <td class="p-3 text-sm w-20">
-                            <div class="flex items-center justify-center gap-8">
-                                <button class="bg-white w-8 h-8">
-                                    <ion-icon name="create" class="text-lime-500  text-2xl"></ion-icon>
-                                </button>
-                                <button class="bg-white w-8 h-8">
-                                    <ion-icon name="trash" class="text-indigo-950 text-2xl"></ion-icon>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="flex w-screen h-screen overflow-x-hidden">
+        <div class="sidebar outline">
 
         </div>
+
+        <div class="w-full outline">
+
+
+
+            <div class="flex w-full justify-center items-center m-6">
+                    <table class="w-full  rounded-lg ">
+                        <thead class="font-bold text-indigo-950 bg-white">
+                            <tr class="rounded-lg">
+                                <th class="px-3 text-sm font-semibold tracking-wide text-left">
+                                    Details
+                                </th>
+                                <th class="px-3 text-sm font-semibold tracking-wide text-left">
+                                    Client ID
+                                </th>
+                                <th class="px-3 text-sm font-semibold tracking-wide text-left">
+                                    Company
+                                </th>
+                                <th class="px-3 text-sm font-semibold tracking-wide text-left">
+                                    Email
+                                </th>
+                                <th class="text-sm tracking-wide">
+                                    <button class="px-3 py-2 rounded-full font-medium bg-indigo-950 text-white">
+                                        Add new client
+                                    </button>
+                                </th>
+        
+                                <th class="p-3 text-sm ">
+                                    <div class="flex justify-center items-center gap-8">
+                                        <button class="bg-white w-8 h-8 rounded-full shadow-md flex justify-center items-center">
+                                            <ion-icon name="search" style="font-size: 16px" class="text-slate-500 text-lg"></ion-icon>
+                                        </button>
+                                        <button class="bg-white w-8 h-8 rounded-full shadow-md flex justify-center items-center">
+                                            <ion-icon name="filter" style="font-size: 16px" class="text-slate-500 text-lg" ></ion-icon>
+                                        </button>
+                                    </div>
+                                    
+                                </th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-100 rounded-t-lg">
+                                <td class="p-3 text-sm text-gray-700 flex items-center gap-2">
+                                    <div class="overflow-hidden rounded-full w-10 h-10">
+                                        <img src="/public/assets/img/client-pics-01.png" alt="Client picture"
+                                            class="object-cover" />
+                                    </div>
+                                    <div>
+                                        <a href="#" class="font-bold text-indigo-950">Lorem Ipsum</a>
+                                        <h4 class="text-xs font-light">Enterprise</h4>
+                                    </div>
+                                </td>
+                                <td class="p-3 text-sm font-semibold text-gray-700 ">#10340</td>
+                                <td class="p-3 text-sm text-gray-700">GreenCycle</td>
+                                <td class="p-3 text-sm text-gray-700">green@cycle.com</td>
+                                <td class="p-3 text-sm text-gray-700"></td>
+                                <td class="p-3 text-sm m-4">
+                                    <div class="flex items-center justify-center gap-8">
+                                        <button class="bg-white w-8 h-8">
+                                            <ion-icon name="color-wand" style="font-size: 24px" class="text-indigo-950 text-2xl"></ion-icon>
+                                        </button>
+                                        <button class="bg-white w-8 h-8">
+                                            <ion-icon name="trash" style="font-size: 24px" class="text-indigo-950 text-2xl"></ion-icon>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+    
+    
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
