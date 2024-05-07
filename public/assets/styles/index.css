@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root{
-    --primary: #0E0E42;
+    --primary: linear-gradient(to bottom, #0E0E42, #282856);
     --secundary: #FFFFFF;
+    --green: linear-gradient(to bottom, #2CCC5B, #B6F04A);
   }
   
   * {
@@ -164,7 +165,8 @@
   
   
   .sidebar li a:hover {
-     background: var(--secundary);
+     background: var(--green, 0.5);
+     color: var(--secundary);
   }
   
   
