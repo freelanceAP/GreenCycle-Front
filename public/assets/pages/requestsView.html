@@ -11,21 +11,21 @@
   <title>Requests</title>
 </head>
 
-<body class="bg-gray-200">
-  <div class="p-4">
-    <div class="mb-4">
-      <h2 class="text-2xl font-bold">Clients Requests</h2>
-    </div>
-
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+<body class="bg-gray-200 m-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Clients Requests</h2>
       <div class="bg-white rounded-lg p-4 shadow-md h-80">
         <table class="w-full text-sm">
-          <thead class="border-b-2 border-gray-200">
+          <thead>
             <tr>
-              <th class="px-3 text-left">Client</th>
-              <th class="px-3 text-left">Date</th>
-              <th class="px-3 text-left">Details</th>
-              <th class="px-3 text-left">Actions</th>
+              <th class="px-3 pb-2 text-left text-sm font-semibold tracking-wide">Client</th>
+              <th class="px-3 pb-2 text-left text-sm font-semibold tracking-wide">Date</th>
+              <th class="px-3 pb-2 text-left text-sm font-semibold tracking-wide">Details</th>
+              <th class="px-3 pb-2 text-left text-sm font-semibold tracking-wide">Actions</th>
+            </tr>
+            <tr class="border-b-2 border-gray-200">
+              <td colspan="4"></td>
             </tr>
           </thead>
           <tbody>
@@ -57,50 +57,58 @@
           </tbody>
         </table>
       </div>
-
-      <div class="bg-white rounded-lg p-4 shadow-md h-80">
-        <p>Additional content or placeholder for the second box.</p>
-      </div>
     </div>
 
-    <div class="bg-white rounded-lg p-4 shadow-md h-80 mt-4 lg:mt-8 md:mt-6 sm:mt-5">
-      <div class="px-5">
-        <table class="w-full text-sm">
-          <thead class="border-b-2 border-gray-200 ">
-            <tr>
-              <th class="px-3 text-left">Client</th>
-              <th class="px-3 text-left">Request ID</th>
-              <th class="px-3 text-left">Details</th>
-              <th class="px-3 text-left">Date</th>
-              <th class="px-3 text-left">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="p-3 text-gray-700">Lorem Ipsum</td>
-              <td class="p-3 font-bold text-indigo-950"><a href="#">#010001</a></td>
-              <td class="p-3 text-gray-700">Lorem Ipsum</td>
-              <td class="p-3 text-gray-700">02 May, 08:30 AM</td>
-              <td class="p-3">
-                <span
-                  class="inline-block w-16 bg-gradient-to-b from-lime-400 to-green-500 text-white text-center px-2 py-1 rounded">Open</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="p-3 text-gray-700">Lorem Ipsum</td>
-              <td class="p-3 font-bold text-indigo-950"><a href="#">#010002</a></td>
-              <td class="p-3 text-gray-700">Lorem Ipsum</td>
-              <td class="p-3 text-gray-700">02 May, 08:30 AM</td>
-              <td class="p-3">
-                <span
-                  class="inline-block w-16 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white text-center px-2 py-1 rounded">Closed</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Monthly Requests</h2>
+      <div class="bg-white rounded-lg p-4 shadow-md h-80">
+        
       </div>
     </div>
   </div>
+
+  <div class="mt-4">
+    <h2 class="text-2xl font-semibold mb-4">Recent Requests</h2>
+  </div>
+
+  <div class="bg-white rounded-lg p-4 shadow-md h-80">
+    <table class="w-full text-sm">
+      <thead class="border-b-2 border-gray-200 ">
+        <tr>
+          <th class="px-3 text-left">Client</th>
+          <th class="px-3 text-left">Request ID</th>
+          <th class="px-3 text-left">Details</th>
+          <th class="px-3 text-left">Date</th>
+          <th class="px-3 text-left">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-3 text-gray-700">Lorem Ipsum</td>
+          <td class="p-3 font-bold text-indigo-950"><a href="#">#010001</a></td>
+          <td class="p-3 text-gray-700">Lorem Ipsum</td>
+          <td class="p-3 text-gray-700">02 May, 08:30 AM</td>
+          <td class="p-3">
+            <span
+              class="inline-block w-16 bg-gradient-to-b from-lime-400 to-green-500 text-white text-center px-2 py-1 rounded">Open</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="p-3 text-gray-700">Lorem Ipsum</td>
+          <td class="p-3 font-bold text-indigo-950"><a href="#">#010002</a></td>
+          <td class="p-3 text-gray-700">Lorem Ipsum</td>
+          <td class="p-3 text-gray-700">02 May, 08:30 AM</td>
+          <td class="p-3">
+            <span
+              class="inline-block w-16 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white text-center px-2 py-1 rounded">Closed</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  </div>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
