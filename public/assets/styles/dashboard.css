@@ -3,15 +3,3 @@
 *{
     font-family: "Ubuntu", sans-serif;
 }
-@keyframes bounce {
-    0%, 100% {
-      transform: translateY(0); /* Posición inicial */
-    }
-    50% {
-      transform: translateY(-10px); /* Rebote hacia arriba */
-    }
-  }
-
-  .hover-bounce:hover {
-    animation: bounce 1.5s infinite; /* Animación que se repite cada segundo mientras el cursor está encima */
-  }
