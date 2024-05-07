@@ -1,165 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/assets/styles/requestView.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <title>Requests</title>
-  </head>
-  <body class="bg-gray-200">
-    <div class="px-7 pt-4">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/public/assets/styles/requestView.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <title>Requests</title>
+</head>
+
+<body class="bg-gray-200">
+  <div class="p-4">
+    <div class="mb-4">
       <h2 class="text-2xl font-bold">Clients Requests</h2>
     </div>
-    <div class="grid grid-cols-2 gap-4 p-4">
-      <div
-        class="min-h-44 max-h-80 col-span-1 bg-white rounded-lg p-4 shadow-md"
-      >
-        <table class="w-full">
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+      <div class="bg-white rounded-lg p-4 shadow-md h-80">
+        <table class="w-full text-sm">
           <thead class="border-b-2 border-gray-200">
             <tr>
-              <th class="px-3 text-sm font-semibold tracking-wide text-left">
-                Client
-              </th>
-              <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                Date
-              </th>
-              <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                Details
-              </th>
-              <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                Actions
-              </th>
+              <th class="px-3 text-left">Client</th>
+              <th class="px-3 text-left">Date</th>
+              <th class="px-3 text-left">Details</th>
+              <th class="px-3 text-left">Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="p-3 text-sm text-gray-700 flex items-center gap-2">
+              <td class="p-3 text-gray-700 flex items-center gap-2">
                 <div class="overflow-hidden rounded-full w-10 h-10">
-                  <img
-                    src="/public/assets/img/client-pics-01.png"
-                    alt="Client picture"
-                    class="object-cover"
-                  />
+                  <img src="/public/assets/img/client-pics-01.png" alt="Client picture" class="object-cover" />
                 </div>
                 <div>
                   <a href="#" class="font-bold text-indigo-950">Lorem Ipsum</a>
                   <h4 class="text-xs font-light">Enterprise</h4>
                 </div>
               </td>
-
-              <td class="p-3 text-sm text-gray-700">01/05/2024</td>
-              <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
-              <td class="p-3 text-sm">
+              <td class="p-3 text-gray-700">01/05/2024</td>
+              <td class="p-3 text-gray-700">Lorem Ipsum</td>
+              <td class="p-3">
                 <div class="flex gap-2">
-                  <div>
-                    <button
-                    class="bg-gradient-to-b from-lime-400 to-green-500 w-7 h-7 rounded-full flex items-center justify-center"
-                  >
-                    <box-icon
-                      type="solid"
-                      name="check-circle"
-                      color="white"
-                      size="20px"
-                    ></box-icon>
+                  <button
+                    class="bg-gradient-to-b from-lime-400 to-green-500 w-7 h-7 rounded-full flex items-center justify-center">
+                    <box-icon type="solid" name="check-circle" color="white" size="20px"></box-icon>
                   </button>
-                  
-                  </div>
-                  <div>
-                    <button
-                      class="bg-gradient-to-b from-indigo-950 to-indigo-900 w-7 h-7 rounded-full flex items-center justify-center"
-                    >
-                      <box-icon
-                        type="solid"
-                        name="x-circle"
-                        color="white"
-                        size="20px"
-                      ></box-icon>
-                    </button>
-                  </div>
+                  <button
+                    class="bg-gradient-to-b from-indigo-950 to-indigo-900 w-7 h-7 rounded-full flex items-center justify-center">
+                    <box-icon type="solid" name="x-circle" color="white" size="20px"></box-icon>
+                  </button>
                 </div>
               </td>
             </tr>
-
           </tbody>
         </table>
       </div>
-      <div
-        class="min-h-72 max-h-96 col-span-1 bg-white rounded-lg shadow-md"
-      ></div>
-      <div class="max-h-10 px-5">
-        <h2 class="flex text-2xl font-bold">Recent Requests</h2>
-      </div>
-      <div
-        class="min-h-44 max-h-80 min-w-96 col-span-2 bg-white rounded-lg shadow-md"
-      >
-        <div class="px-5">
-          <table class="w-full">
-            <thead class="border-b-2 border-gray-200">
-              <tr>
-                <th class="px-3 text-sm font-semibold tracking-wide text-left">
-                  Client
-                </th>
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                  Request ID
-                </th>
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                  Details
-                </th>
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                  Date
-                </th>
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
-                <td class="p-3 text-sm text-gray-700">
-                  <div>
-                    <a href="#" class="font-bold text-indigo-950">#010001</a>
-                  </div>
-                </td>
-                <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
-                <td class="p-3 text-sm text-gray-700">02 May, 08:30 AM</td>
-                <td class="p-3 text-sm">
-                  <span
-                    class="inline-block w-16 bg-gradient-to-b from-lime-400 to-green-500 text-white text-center px-2 py-1 rounded"
-                    >Open</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
-                <td class="p-3 text-sm text-gray-700">
-                  <div>
-                    <a href="#" class="font-bold text-indigo-950">#010002</a>
-                  </div>
-                </td>
-                <td class="p-3 text-sm text-gray-700">Lorem Ipsum</td>
-                <td class="p-3 text-sm text-gray-700">02 May, 08:30 AM</td>
-                <td class="p-3 text-sm">
-                  <span
-                    class="inline-block w-16 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white text-center px-2 py-1 rounded"
-                    >Closed</span
-                  >
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
+
+      <div class="bg-white rounded-lg p-4 shadow-md h-80">
+        <p>Additional content or placeholder for the second box.</p>
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="/src/js/app.js"></script>
-  </body>
+    <div class="bg-white rounded-lg p-4 shadow-md h-80 mt-4 lg:mt-8 md:mt-6 sm:mt-5">
+      <div class="px-5">
+        <table class="w-full text-sm">
+          <thead class="border-b-2 border-gray-200 ">
+            <tr>
+              <th class="px-3 text-left">Client</th>
+              <th class="px-3 text-left">Request ID</th>
+              <th class="px-3 text-left">Details</th>
+              <th class="px-3 text-left">Date</th>
+              <th class="px-3 text-left">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 font-bold text-indigo-950"><a href="#">#010001</a></td>
+              <td class="p-3 text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-gray-700">02 May, 08:30 AM</td>
+              <td class="p-3">
+                <span
+                  class="inline-block w-16 bg-gradient-to-b from-lime-400 to-green-500 text-white text-center px-2 py-1 rounded">Open</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 font-bold text-indigo-950"><a href="#">#010002</a></td>
+              <td class="p-3 text-gray-700">Lorem Ipsum</td>
+              <td class="p-3 text-gray-700">02 May, 08:30 AM</td>
+              <td class="p-3">
+                <span
+                  class="inline-block w-16 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white text-center px-2 py-1 rounded">Closed</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="/src/js/app.js"></script>
+</body>
+
 </html>
