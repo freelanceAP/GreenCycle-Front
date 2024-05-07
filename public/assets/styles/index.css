@@ -84,6 +84,20 @@
     margin-left: -60px;
     width: 180px;
   }
+
+  .sidebar .logo-details .logo-isotipo{
+    margin-left: 0px;
+    width: 50px;
+    opacity: 1;
+    
+  }
+  
+  .sidebar.open .logo-details .logo-isotipo{
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+
   
   .sidebar .logo-details #btn {
     position: absolute;
