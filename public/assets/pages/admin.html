@@ -1,13 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+    <html lang="en">
+
+    <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/src/js/app.js" type="module"></script>
-    <title>Admin</title>
-</head>
-<body>
+    <title>Administrative</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="/public/assets/styles/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js">
+
+    </head>
+
+    <body>
     <div class="sidebar"></div>
-    <div></div>
-</body>
+    <section class="home-section bg-slate-200">
+        <div class="navbar"></div>
+        <!-- Aqui va el contenido de las paginas -->
+        <div class="m-10 flex justify-between">
+            <div class="flex justify-center align-middle w-3/12 bg-white rounded-xl py-6 p-10">
+                <div class="flex flex-col justify-center align-middle">
+                    <div>
+                        <div class="mb-8">
+                            <canvas id="myChart"></canvas>
+                          </div>
+                          
+                          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                          
+                          <script>
+                            const ctx = document.getElementById('myChart');
+                          
+                            new Chart(ctx, {
+                              type: 'doughnut',
+                              options: {
+                                cutout:110,
+                                borderRadius: 120,
+                              },
+                              data: {
+                                datasets: [{
+                                  label: 'Process',
+                                  data: [3, 1],
+                                  backgroundColor: [
+                                    '#2CCC5B',
+                                    '#fff',
+                                  ],
+                                  hoverOffset: 4
+                                }]
+                              },
+                            });
+                          </script>
+                    </div>
+                    <div class="flex flex-col ml-4">
+                        <div class="font-bold text-xl">Collection</div>
+                        <div class="text-sm">We are in the process of collecting
+                            the waste.</div>
+                    </div>
+                    <div class="mt-10 flex justify-around">
+                        
+                        <a href="#"><div class="items-center flex text-[#282856]"><ion-icon name="arrow-back"></ion-icon>Previous</div></a>
+                        <a href="#"><div class="items-center flex text-[#2CCC5B]">Next<ion-icon name="arrow-forward"></ion-icon></div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-8/12 bg-white rounded-xl p-5">a</div>
+        </div>
+    </section>
+
+    <script type="module" src="/src/js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    </body>
+
 </html>
