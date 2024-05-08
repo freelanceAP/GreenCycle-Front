@@ -3,7 +3,7 @@
 export function sidebar() {
 
     const sidebarContent = `  <div class="logo-details">
-    <img class="bx bxl-c-plus-plus icon" src="./public/assets/img/Logo verde-blanco.svg" alt="">
+    <img class="bx bxl-c-plus-plus icon" id="logo_verde_blanco" src="./public/assets/img/Logo verde-blanco.svg" alt="">
     <img  class="logo-isotipo" src="./public/assets/img/isotipo-verde.svg" alt="">
 
     </div>

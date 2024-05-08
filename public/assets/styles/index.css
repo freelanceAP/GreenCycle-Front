@@ -79,14 +79,14 @@
     opacity: 1;
   }
   
-  .sidebar .logo-details img{
+  .sidebar.open .logo-details #logo_verde_blanco{
     margin-top: 20px;
-    margin-left: -60px;
-    width: 180px;
+    margin-left: -40px;
+    width: 250px;
   }
 
   .sidebar .logo-details .logo-isotipo{
-    margin-left: 0px;
+    margin-left: -40px;
     width: 50px;
     opacity: 1;
     
