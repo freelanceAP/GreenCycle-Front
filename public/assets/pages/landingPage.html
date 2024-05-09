@@ -1,181 +1,324 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Green Cycle Landing Page</title>
-    <link rel="stylesheet" href="/public/assets/styles/landingPage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="/public/assets/styles/landingPage.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons.css">
+    <title>GreenCycle</title>
 </head>
 
-<body class="bg-white text-indigo-950">
-    <nav
-        class="bg-gradient-to-b from-indigo-950 to-indigo-900 bg-opacity-10 p-4 flex justify-between items-center sticky top-0 z-50">
-        <!-- Logo -->
-        <div class="text-white font-bold text-xl">
-            <img src="/public/assets/img/Logo verde-blanco.svg" width="100px" alt="Green Cycle Logo">
+<body>
+    
+    <div data-dial-init class="fixed end-6 bottom-6 group">
+        <!-- Menú desplegable -->
+        <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+            <!-- Botón para Login -->
+            <a href="login.html" data-tooltip-target="tooltip-login" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] bg-white rounded-full border shadow-md hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 focus:outline-none">
+                <ion-icon name="log-in" size="small" class="text-green-500"></ion-icon>
+                <span class="sr-only">Login</span>
+            </a>
+            <!-- Tooltip para Login -->
+            <div id="tooltip-login" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-indigo-950 rounded-lg shadow-sm opacity-0 tooltip">
+                Login
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+    
+            <!-- Botón para Contact -->
+            <a href="#contact-form" data-tooltip-target="tooltip-contact" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] bg-white rounded-full border shadow-md hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 focus:outline-none">
+                <ion-icon name="mail" size="small" class="text-green-500"></ion-icon>
+                <span class="sr-only">Contact</span>
+            </a>
+            <!-- Tooltip para Contact -->
+            <div id="tooltip-contact" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-indigo-950 rounded-lg shadow-sm opacity-0 tooltip">
+                Contact
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+    
+            <!-- Nuevo botón para Share -->
+            <button data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] bg-white rounded-full border shadow-md hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 focus:outline-none">
+                <ion-icon name="send" size="small" class="text-green-500"></ion-icon>
+                <span class="sr-only">Share</span>
+            </button>
+            <!-- Tooltip para Share -->
+            <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-indigo-950 rounded-lg shadow-sm opacity-0 tooltip">
+                Share
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
         </div>
-        <!-- Navigation Links -->
-        <div class="flex space-x-6">
-            <a href="#home" class="text-white hover:text-gray-300">Home</a>
-            <a href="#about" class="text-white hover:text-gray-300">About Us</a>
-            <a href="#services" class="text-white hover:text-gray-300">Services</a>
-            <a href="#contact" class="text-white hover:text-gray-300">Contact</a>
-        </div>
-        <!-- Button with Gradient -->
-        <a href="/public/assets/pages/login.html"
-            class="bg-gradient-to-l from-lime-500 to-green-500 text-white font-semibold py-2 px-4 rounded-xl hover:opacity-90">
-            Let's work!
-        </a>
-    </nav>
+    
+        <!-- Botón principal -->
+        <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-green-500 rounded-full w-14 h-14 hover:bg-green-600 focus:ring-4 focus:ring-green-300 focus:outline-none">
+            <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+            </svg>
+            <span class="sr-only">Open actions menu</span>
+        </button>
+    </div>
+    
 
-    <!-- Home Section -->
-    <section id="home" class="relative bg-cover bg-center h-[32rem]"
-        style="background-image: url('/public/assets/img/bg-login.webp');">
-        <!-- Overlay for dimming background -->
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <!-- Flexbox to center content -->
-        <div class="relative h-full flex flex-col justify-center items-center text-center text-white p-8">
-            <h1
-                class="text-6xl font-bold mb-2 bg-gradient-to-b from-lime-400 via-lime-500 to-green-400 text-transparent bg-clip-text">
-                Welcome to <br>
-                Green Cycle</h1>
-            <p class="text-lg mt-2">We are committed to sustainability <br>
-                and environmental care.</p>
+    <!-- Combined Navbar and Hero Section -->
+    <section id="hero-section"
+        class="bg-center bg-no-repeat bg-[url('/public/assets/img/bg-login.webp')] bg-gray-700 bg-blend-multiply">
+        <!-- Hero and navbar sharing the same background -->
+        <!-- Navigation -->
+        <nav
+            class="bg-indigo-950 bg-opacity-50 backdrop-blur-lg sticky top-0 z-50 w-full max-w-screen-xl mx-auto shadow-lg">
+            <!-- Sticky and blur -->
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#hero-section" class="flex items-center space-x-3">
+                    <img src="" class="h-8" alt="" />
+                    <span class="self-center text-2xl text-white font-bold whitespace-nowrap">GreenCycle</span>
+                </a>
+                <div class="flex md:order-2 space-x-3">
+                    <a type="button"
+                        class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+                        href="/public/assets/pages/login.html">Get started</a>
+                    <button data-collapse-toggle="navbar-cta" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justifica-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0">
+                        <li><a href="#hero-section"
+                                class="block py-2 px-3 md:p-0 text-white rounded-md md:bg-transparent md:text-green-500">Home</a>
+                        </li>
+                        <li><a href="#about-us"
+                                class="block py-2 px-3 md:p-0 text-white redondeado md:hover:bg-transparente md:hover:text-green-500">About</a>
+                        </li>
+                        <li><a href="#services"
+                                class="block py-2 px-3 md:p-0 text-white redondeado md:hover:bg-transparente md:hover:text-green-500">Services</a>
+                        </li>
+                        <li><a href="#contact-form"
+                                class="block py-2 px-3 md:p-0 text-white md:hover:bg-transparente md:hover:text-green-500">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56"> <!-- Hero content -->
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+                Welcome to <span
+                    class="text-transparent bg-clip-text bg-gradient-to-t to-lime-400 from-green-400">GreenCycle</span>
+            </h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+                We are committed to sustainability and environmental care.
+            </p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                <a href=""
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-500 hover:bg-green-600">
+                    Get started
+                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+                <a href="#services"
+                    class="inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-white hover:text-indigo-950">
+                    Learn more
+                </a>
+            </div>
         </div>
     </section>
+
 
     <!-- About Us Section -->
-    <section id="about" class="flex flex-col md:flex-row items-center p-12">
-
-        <div class="w-full md:w-1/2 ">
-            <img src="/public/assets/img/resoruce-01.png" alt="About Us" class="" />
-        </div>
-        <!-- Text Content -->
-        <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
-            <h2 class="text-3xl font-bold">About Us</h2>
-            <p class="mt-4">We are a company focused on recycling and sustainability,<br>
-                aiming to make the world a betterplace through eco-friendly practices.</p>
-        </div>
-    </section>
+  <!-- About Us Section -->
+  <section id="about-us" class="max-w-screen-xl mx-auto py-24 px-8 flex flex-col md:flex-row"> <!-- Padding para tener la misma altura -->
+    <div class="md:w-1/2 flex justify-center"> <!-- Cambié la disposición para centrar la imagen -->
+        <img src="/public/assets/img/resoruce-01.png" class="max-w-xs rounded-lg" alt="About Us"> <!-- max-w-xs limita el ancho -->
+    </div>
+    <div class="md:w-1/2 md:ps-8 flex flex-col justify-center">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="text-gray-700">GreenCycle is dedicated to promoting sustainability and environmental responsibility. Our goal is to provide services that contribute to a greener planet.</p>
+    </div>
+</section>
 
     <!-- Services Section -->
-    <section id="services" class="p-12">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold">Our Services</h2>
-            <p class="mt-2">We offer a variety of eco-friendly services to help you go green.</p>
-        </div>
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6 mt-8">
-            <!-- Card 1 -->
-            <div class="w-full md:w-1/3 h-56 p-4 bg-white rounded-lg shadow-md text-center">
-                <div class="text-green-500 text-4xl mb-5">🌱</div>
-                <h3 class="text-xl font-bold mt-2">Eco-friendly Recycling</h3>
-                <p class="mt-2">We provide recycling services that are good for the environment and reduce waste.</p>
+    <section id="services" class="bg-gray-100 max-w-screen-xl mx-auto py-24 px-8"> <!-- Padding for same height -->
+        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2> <!-- Section title -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white border rounded-lg p-6 shadow-lg text-center">
+                <ion-icon name="leaf-outline" size="large" class="text-green-500 mb-4"></ion-icon>
+                <h3 class="text-xl font-semibold">Waste Management</h3>
+                <p class="text-gray-600">We provide efficient and sustainable waste management solutions for various
+                    industries.</p>
             </div>
-            <!-- Card 2 -->
-            <div class="w-full md:w-1/3 h-56 p-4 bg-white rounded-lg shadow-md text-center">
-                <div class="text-green-500 text-4xl mb-5">♻️</div>
-                <h3 class="text-xl font-bold">Sustainable Practices</h3>
-                <p class="mt-2">Our sustainable practices ensure minimal impact on the environment.</p>
+            <div class="bg-white border rounded-lg p-6 shadow-lg text-center">
+                <ion-icon name="archive-outline" size="large" class="text-green-500 mb-4"></ion-icon>
+                <h3 class="text-xl font-semibold">Recycling Programs</h3>
+                <p class="text-gray-600">Our recycling programs help reduce waste and promote reuse of materials.</p>
             </div>
-            <!-- Card 3 -->
-            <div class="w-full md:w-1/3 h-56 p-4 bg-white rounded-lg shadow-md text-center">
-                <div class="text-4xl mb-5">🌎</div>
-                <h3 class="text-xl font-bold">Global Impact</h3>
-                <p class="mt-2">We aim to make a positive global impact through our services.</p>
+            <div class="bg-white border rounded-lg p-6 shadow-lg text-center">
+                <ion-icon name="earth-outline" size="large" class="text-green-500 mb-4"></ion-icon>
+                <h3 class="text-xl font-semibold">Environmental Education</h3>
+                <p class="text-gray-600">We offer educational programs to raise awareness about sustainability and
+                    environmental care.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-12 px-6 md:px-12 lg:px-20 bg-gray-100">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold">What Our Clients Say</h2>
-            <p class="mt-2">Here's what our satisfied clients have to say about us.</p>
-        </div>
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6 mt-8">
-            <!-- Testimonial Card 1 -->
-            <div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-md text-center">
-                <img src="/public/assets/img/client-pics-04.png" alt="Client Photo"
-                    class="w-16 h-16 rounded-full mx-auto" />
-                <h4>John Doe</h4>
-                <p>CEO, Green Energy Corp.</p>
-                <p class="mt-3">"Green Cycle helped us reduce waste and improve our sustainability practices. Highly
-                    recommended!"</p>
-                <div class="mt-2 text-yellow-400">⭐⭐⭐⭐⭐</div>
+    <!-- Testimonial Section -->
+    <section class="max-w-screen-xl mx-auto py-24 px-8"> <!-- Padding for same height -->
+        <h2 class="text-3xl font-bold text-center mb-6">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white border rounded-lg p-6 shadow-lg flex flex-col w-3/4 mx-auto"> <!-- Reduced width -->
+                <div class="flex items-center mb-4">
+                    <img src="/public/assets/img/client-pics-05.png" class="w-12 h-12 rounded-full" alt="Client 1">
+                    <div class="ms-4">
+                        <h3 class="font-semibold">John Doe</h3>
+                        <p class="text-gray-600">CEO, XYZ Corp.</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">GreenCycle has transformed our waste management practices. We are now more
+                    sustainable and environmentally conscious.</p>
+                    <div class="flex items-center mt-4">
+                        <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                    </div>
             </div>
-            <!-- Testimonial Card 2 -->
-            <div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-md text-center">
-                <img src="/public/assets/img/client-pics-01.png" alt="Client Photo"
-                    class="w-16 h-16 rounded-full mx-auto" />
-                <h4>Jane Smith</h4>
-                <p>Founder, Eco Solutions</p>
-                <p class="mt-3">"The team at Green Cycle is professional and dedicated to sustainability. A pleasure to
-                    work with!"</p>
-                <div class="mt-2 text-yellow-400">⭐⭐⭐⭐⭐</div>
-            </div>
-            <!-- Testimonial Card 3 -->
-            <div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-md text-center">
-                <img src="/public/assets/img/client-pics-05.png" alt="Client Photo"
-                    class="w-16 h-16 rounded-full mx-auto" />
-                <h4>Michael Brown</h4>
-                <p>Manager, Recycle Solutions Inc.</p>
-                <p class="mt-3">"Thanks to Green Cycle, we have greatly reduced our carbon footprint. Outstanding
-                    service!"</p>
-                <div class="mt-2 text-yellow-400">⭐⭐⭐⭐⭐</div>
+            <div class="bg-white border rounded-lg p-6 shadow-lg flex flex-col w-3/4 mx-auto"> <!-- Reduced width -->
+                <div class="flex items-center mb-4">
+                    <img src="/public/assets/img/client-pics-01.png" class="w-12 h-12 rounded-full" alt="Client 2">
+                    <div class="ms-4">
+                        <h3 class="font-semibold">Jane Smith</h3>
+                        <p class=" text-gray-600">CTO, ABC Ltd.</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">GreenCycle has helped us implement efficient recycling programs. We have
+                    reduced waste and improved our environmental impact.</p>
+
+
+                <div class="flex items-center mt-4">
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 px-6 md:px-12 lg:px-20 bg-white">
-        <h2 class="text-3xl font-bold text-indigo-950 text-center">Contact Us</h2>
-        <form class="mt-6 max-w-lg mx-auto text-indigo-950">
-            <div class="mb-4">
-                <label for="name" class="block text-lg">Name</label>
-                <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded outline-none"
-                    placeholder="Your name" required>
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="max-w-screen-xl mx-auto py-24 px-8 bg-gray-100"> <!-- Padding for same height -->
+        <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+        <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Your Name">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Your Email">
+                </div>
             </div>
-            <div class="mb-4">
-                <label for="email" class="block text-lg">Email</label>
-                <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded outline-none"
-                    placeholder="Your email" required>
+            <div class="mt-6">
+                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                <textarea id="message" name="message"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    rows="5" placeholder="Your Message"></textarea>
             </div>
-            <div class="mb-4">
-                <label for="message" class="block text-lg">Message</label>
-                <textarea id="message" class="w-full p-2 border border-gray-300 rounded outline-none"
-                    placeholder="Your message" required></textarea>
-            </div>
-            <div class="text-center">
+            <div class="mt-6 text-center"> <!-- Centered button -->
                 <button type="submit"
-                    class="bg-indigo-950 text-white px-4 py-2 rounded hover:bg-gradient-to-b from-lime-500 to-green-500 transition ">Send
+                    class="px-5 py-3 text-white bg-green-500 rounded-lg hover:bg-green-600 focus:ring-4 focus:ring-green-300">Send
                     Message</button>
             </div>
         </form>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-b from-lime-500 to-green-500 text-white p-4 text-center">
-        <div class="flex flex-col md:flex-row justify-around items-center font-normal">
-            <!-- Sections -->
-            <div class="flex space-x-4">
-                <a href="#home" class="text-white">Home</a>
-                <a href="#about" class="text-white">About Us</a>
-                <a href="#services" class="text-white">Services</a>
-                <a href="#contact" class="text-white">Contact</a>
+    <footer class="bg-white rounded-lg shadow m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#hero-section" class="flex items-center mb-4 sm:mb-0 space-x-3">
+                    <img src="" class="h-8" alt="" />
+                    <span class="self-center text-2xl font-bold text-indigo-950">GreenCycle</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+                    <li>
+                        <a href="#hero-section" class="hover:underline me-4 md:me-6">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about-us" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="hover:underline me-4 md:me-6">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact-form" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <!-- Social Media -->
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="text-white">Facebook</a>
-                <a href="#" class="text-white">Twitter</a>
-                <a href="#" class="text-white">Instagram</a>
-            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center">© 2023 <a href="#hero-section"
+                    class="hover:underline">GreenCycle</a>. All Rights Reserved.</span>
         </div>
-        <p class="mt-10 font-light text-sm">© 2024 GreenCycle. All Rights Reserved.</p>
     </footer>
+
     <script src="/src/features/scrollAnimation.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
-</html>

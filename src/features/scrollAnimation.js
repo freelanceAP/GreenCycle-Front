@@ -1,18 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("hidden");
-    });
-
-    const links = document.querySelectorAll("nav a");
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
-        link.addEventListener("click", (e) => {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(link.getAttribute("href"));
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            const targetId = this.getAttribute('href').slice(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
