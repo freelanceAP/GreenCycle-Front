@@ -18,13 +18,13 @@
     <!-- Menú Rápido -->
     <div data-dial-init class="fixed right-6 bottom-6 z-50">
         <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
-
+            <!-- Botón para Login -->
             <a href="login.html" data-tooltip-target="tooltip-login" data-tooltip-placement="left"
                 class="flex justify-center items-center w-[52px] h-[52px] bg-white rounded-full border shadow-md hover:bg-gray-50 focus:outline-none">
                 <ion-icon name="log-in" class="text-lime-400 text-xl"></ion-icon>
                 <span class="sr-only">Login</span>
             </a>
-
+            <!-- Login -->
             <div id="tooltip-login" role="tooltip"
                 class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white bg-indigo-950 rounded-lg shadow-sm opacity-0 tooltip">
                 Login
@@ -74,17 +74,19 @@
 
     <!-- Section combinada para navbar y hero -->
     <section id="hero-section"
-        class="relative bg-center bg-no-repeat bg-[url('/public/assets/img/bg-login.webp')] bg-gray-700 bg-blend-multiply min-h-screen">
+        class="relative bg-center bg-no-repeat bg-cover bg-[url('/public/assets/img/bg-login.webp')] bg-gray-700 bg-blend-multiply min-h-screen">
+        <!-- Se agregó bg-cover para que cubra toda la sección -->
 
         <nav
             class="bg-gray-900 bg-opacity-50 sticky top-0 z-50 w-full max-w-screen-xl mx-auto shadow-xl transition-opacity duration-500">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#hero-section" class="flex items-center space-x-3">
-                    <img src="" class="h-8" alt="" />
-                    <span class="self-center text-2xl text-white font-bold whitespace-nowrap">GreenCycle</span>
+                    <img src="/public/assets/icons/isotipo-verde.svg" class="h-12 -mr-2" alt="Logo" />
+                    <span class="self-center text-2xl text-white font-bold whitespace-nowrap"><span
+                            class="text-transparent bg-clip-text bg-gradient-to-t to-lime-400 from-green-400">Green</span>Cycle</span>
                 </a>
                 <div class="flex md:order-2 space-x-3">
-                    <a class="text-white bg-gradient-to-br from-lime-500 to-green-500 font-medium rounded-lg text-sm px-4 py-2"
+                    <a class="text-white bg-gradient-to-br -ml-2 from-lime-500 to-green-500 font-medium rounded-lg text-sm px-4 py-2 loading-link"
                         href="/public/assets/pages/login.html">Login</a>
                     <button data-collapse-toggle="navbar-cta" type="button"
                         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300">
@@ -113,7 +115,7 @@
                         </li>
                         <li>
                             <a href="#contact-form"
-                                class="block py-2 px-3 text-white hover:text-lime-400 active=text-green-500">Contact</a>
+                                class="block py-2 px-3 text-white hover=text-lime-400 active=text-green-500">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -125,14 +127,14 @@
             class="flex flex-col justify-center items-center text-center min-h-screen px-4 mx-auto max-w-screen-xl py-24 lg:py-44">
             <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white md:text-6xl lg:text-7xl">
                 Welcome to <br><span
-                    class="text-transparent bg-clip-text bg-gradient-to-t to-lime-400 from-green-400">GreenCycle</span>
+                    class="text-transparent bg-clip-text bg-gradient-to-br to-lime-400 from-green-400">GreenCycle</span>
             </h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
                 We are committed to sustainability and environmental care.
             </p>
             <div class="flex flex-col space-y-4 sm:flex-row justify-center items-center sm:justify-center sm:space-y-0">
                 <a href="/public/assets/pages/login.html"
-                    class="inline-flex justify-center w-56 lg:w-48 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-gradient-to-br from-lime-500 to-green-500">
+                    class="inline-flex justify-center w-56 lg:w-48 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-gradient-to-br from-lime-500 to-green-500 loading-link">
                     Get started
                 </a>
                 <a href="#services"
@@ -141,7 +143,27 @@
                 </a>
             </div>
         </div>
+
+        <div id="loading-overlay"
+            class="hidden fixed inset-0 flex justify-center items-center z-50 bg-gradient-to-tr from-indigo-950 to-gray-950">
+            <div class="flex items-center justify-center w-56 h-56 rounded-lg bg-transparent">
+                <div role="status">
+                    <svg aria-hidden="true" class="w-16 h-16 text-gray-200 animate-spin fill-lime-400"
+                        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor" />
+                        <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill" />
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
     </section>
+
 
     <!-- About us -->
     <section id="about-us"
@@ -245,18 +267,19 @@
                 </div>
             </div>
             <div data-aos="fade-up" class="bg-white border rounded-xl p-6 shadow-lg flex flex-col w-3/4 mx-auto">
-                <div class="flex items-center mb-4">
+                <div class="flex justify-center items-center mb-4">
                     <img src="/public/assets/img/client-pics-01.png" class="w-12 h-12 rounded-full" alt="Client 2">
                     <div class="ms-4">
                         <h3 class="font-semibold">Jane Smith</h3>
                         <p class=" text-gray-600">CTO, ABC Ltd.</p>
                     </div>
                 </div>
-                <p class="text-gray-700">"GreenCycle has helped us implement efficient recycling programs. We have
+                <p class="text-gray-700 text-center">"GreenCycle has helped us implement efficient recycling programs.
+                    We have
                     reduced waste and improved our environmental impact".</p>
 
 
-                <div class="flex items-center mt-4">
+                <div class="flex justify-center items-center mt-4">
                     <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor" viewBox="0 0 22 20">
                         <path
@@ -290,8 +313,8 @@
 
     <!-- Contact Form Section -->
     <section id="contact-form" class="max-w-screen-xl mx-auto py-24 px-8 bg-white text-indigo-950">
-        <h2 class="text-4xl font-bold mb-12 text-center">Get in touch</h2>
-        <div data-aos="fade-right" class="lg:max-w-2xl lg:mx-auto">
+        <h2 data-aos="fade-down" class="text-4xl font-bold mb-12 text-center">Get in touch</h2>
+        <div data-aos="fade-up" class="lg:max-w-2xl lg:mx-auto">
             <form>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -327,7 +350,7 @@
         <div data-aos="fade-up" class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="#hero-section" class="flex items-center mb-4 sm:mb-0 space-x-3">
-                    <img src="" class="h-8" alt="" />
+                    <img src="/public/assets/icons/isotipo-verde.svg" class="h-8 -mr-2" alt="" />
                     <span class="self-center text-2xl font-bold text-indigo-950">GreenCycle</span>
                 </a>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
