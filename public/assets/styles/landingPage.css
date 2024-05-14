@@ -12,6 +12,19 @@
     fill: url(#gradient);
 }
 
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #B6F04A, #2CCC5B);
+  }
+  
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
