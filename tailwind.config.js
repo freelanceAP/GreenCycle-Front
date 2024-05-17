@@ -2,6 +2,7 @@
 module.exports = {
   theme: {
     extend: {
+<<<<<<< HEAD
       keyframes: {
         slideUp: {
           '0%': {
@@ -23,3 +24,25 @@ module.exports = {
 };
 
 
+=======
+    },
+  },
+  plugins: [
+    require('flowbite/plugin')({
+      charts: true,
+    }),
+    function({ addUtilities }) {
+      addUtilities({
+        '.hide-scrollbar': {
+          '-webkit-overflow-scrolling': 'touch',
+          'scrollbar-width': 'none', 
+          '-ms-overflow-style': 'none', 
+        },
+        '.hide-scrollbar::-webkit-scrollbar': {
+          display: 'none'
+        }
+      }, ['responsive', 'hover']);
+    }
+  ],
+};
+>>>>>>> be3bc3a8fe14f46ab621c622c5e8260fa96748c5

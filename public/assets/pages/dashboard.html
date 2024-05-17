@@ -3,124 +3,244 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
-  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/public/assets/styles/index.css">
-  <link rel="stylesheet" href="/public/assets/styles/dashboard.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/public/assets/styles/general.css">
+  <link rel="icon" type="image/x-icon" href="/public/assets/icons/isotipo-verde.svg">
+
+
+  <title>Dashboard</title>
 </head>
 
-<body>
-  <div class="sidebar"></div>
-  <section class="home-section bg-slate-100">
-    <div class="navbar"></div>
-    <!-- Aqui va el contenido de las paginas -->
-    <div class="container w-full h-full flex justify-center align-middle items-center mt-4 mr-4 p-4">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div
-          class="lg:row-span-2 bg-gradient-to-b from-indigo-950 via-indigo-900 to-green-500 hover:bg-gradient-to-b rounded-lg p-4 shadow-md transform transition-all duration-700 hover:scale-105 overflow-hidden h-[33rem]">
-          <div class="flex flex-col justify-between h-full">
-            <div class="m-6">
-              <h1 class="text-4xl m:text-5xl font-bold text-white whitespace-normal sm:whitespace-nowrap">
-                Welcome to
-                <br />
-                Green Cycle
-              </h1>
-              <div
-                class="flex justify-start items-center mt-4 p-4 bg-indigo-900 rounded-lg shadow-md h-10 w-[7.8rem] transition duration-300 ease-in-out lg:hover:scale-105">
-                <button class="text-lg font-medium text-white">
-                  Let's work!
-                </button>
+<body class="bg-slate-800">
+  <nav class="fixed top-0 z-40 w-full bg-gray-900 border-b border-gray-700">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start rtl:justify-end">
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+            type="button"
+            class="inline-flex items-center p-2 text-sm text-gray-400 rounded-lg sm:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+              </path>
+            </svg>
+          </button>
+          <a href="" class="flex ms-2 md:me-24">
+            <img src="/public/assets/icons/isotipo-verde.svg" class="h-8 me-3" alt="Logo" />
+            <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">GreenCycle</span>
+          </a>
+        </div>
+        <div class="flex items-center">
+          <div class="flex items-center ms-3">
+            <div class="flex items-center space-x-4">
+              <button type="button" class="flex-shrink-0 bg-gray-800 rounded-full focus:ring-4 focus:ring-lime-500"
+                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                <span class="sr-only">Open user menu</span>
+                <img class="w-8 h-8 rounded-full" src="/public/assets/img/client-pics-01.png" alt="user photo">
+              </button>
+              <!-- El texto solo será visible en tamaños md y superiores -->
+              <div class="hidden md:block">
+                <h2 class="text-white font-medium">Lorem Ipsum</h2>
+                <h4 class="text-white text-xs font-light">Admin</h4>
               </div>
             </div>
-    
-            <div class="flex justify-center items-center -m-6">
-              <img class="w-[23rem] h-[25rem] object-cover" src="/public/assets/img/resoruce-01.png" alt="logo" />
+            <div class="z-50 hidden my-4 text-base list-none rounded-lg bg-gray-900 divide-y divide-gray-600"
+              id="dropdown-user">
+              <div class="px-4 py-3" role="none">
+                <p class="text-sm text-white" role="none">
+                  Neil Sims
+                </p>
+                <p class="text-sm font-medium text-white truncate" role="none">
+                  neil.sims@flowbite.com
+                </p>
+              </div>
+              <ul class="py-1" role="none">
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                    role="menuitem">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                    role="menuitem">Settings</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                    role="menuitem">Earnings</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                    role="menuitem">Sign out</a>
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-    
-        <div
-          class="bg-white rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-b hover:from-white hover:to-green-50 w-full h-64">
-          <div class="flex flex-col justify-center gap-2 items-center text-center">
-            <div
-              class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
-              <ion-icon name="stats-chart" class="text-white text-3xl"></ion-icon>
-            </div>
-            <h1 class="text-2xl text-indigo-950 font-semibold">Total Collections</h1>
-            <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">56
-            </h1>
-            <a href="#"
-              class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
-              See More
-            </a>
-          </div>
-        </div>
-    
-    
-        <div
-          class="bg-white rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-b hover:from-white hover:to-green-50 w-full h-64">
-          <div class="flex flex-col justify-center gap-2 items-center text-center">
-            <div
-              class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
-              <ion-icon name="document-text" class="text-white text-3xl"></ion-icon>
-            </div>
-            <h1 class="text-2xl text-indigo-950 font-semibold">Completed</h1>
-            <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
-              24
-            </h1>
-            <a href="#"
-              class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
-              See More
-            </a>
-          </div>
-        </div>
-    
-        <div
-          class="bg-white rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-b hover:from-white hover:to-green-50 w-full h-64">
-          <div class="flex flex-col justify-center items-center gap-2 text-center">
-            <div
-              class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
-              <ion-icon name="time" class="text-white text-3xl"></ion-icon>
-            </div>
-            <h1 class="text-2xl text-indigo-950 font-semibold">In Progress</h1>
-            <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
-              16
-            </h1>
-            <a href="#"
-              class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
-              See More
-            </a>
-          </div>
-        </div>
-    
-        <div
-          class="bg-white rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-b hover:from-white hover:to-green-50 w-full h-64">
-          <div class="flex flex-col justify-center items-center gap-2 text-center">
-            <div
-              class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
-              <ion-icon name="leaf" class="text-white text-3xl"></ion-icon>
-            </div>
-            <h1 class="text-2xl text-indigo-950 font-semibold">Actives</h1>
-            <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
-              4
-            </h1>
-            <a href="#"
-              class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-b from-indigo-950 to-indigo-900 text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
-              See More
-            </a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <script type="module" src="/src/js/app.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <aside id="logo-sidebar"
+    class="fixed top-0 left-0 z-30 w-60 h-screen pt-20 transition-transform -translate-x-full bg-gray-900 border-r border-gray-700 sm:translate-x-0"
+    aria-label="Sidebar">
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-900">
+      <ul class="space-y-4 font-medium">
+        <li>
+          <a href="#" class="flex items-center p-2 text-white hover:text-lime-400 transition duration-200">
+            <svg class="w-5 h-5 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor" viewBox="0 0 22 21">
+              <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066Z" />
+              <path
+                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+            </svg>
+            <span class="ms-3">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center p-2 text-white hover:text-lime-400 transition duration-200">
+            <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+              <path
+                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+            </svg>
+            <span class="flex-1 ms-3 whitespace-nowrap">Admin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center p-2 text-white hover:text-lime-400 transition duration-200">
+            <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+              <path
+                d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+            </svg>
+            <span class="flex-1 ms-3 whitespace-nowrap">Clients</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center p-2 text-white hover:text-lime-400 transition duration-200">
+            <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+            </svg>
+            <span class="flex-1 ms-3 whitespace-nowrap">Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <div id="content-container"
+    class="absolute inset-y-0 rtl:inset-r-0 start-0 z-10 pt-8  pl-72 pr-8 w-full flex flex-col justify-center items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div
+        class="lg:row-span-2 bg-gradient-to-b from-gray-900 to-slate-800 hover:bg-gradient-to-br rounded-lg p-4 shadow-md transform transition-all duration-700 hover:scale-105 overflow-hidden h-[33rem]">
+        <div class="flex flex-col justify-between h-full">
+          <div class="m-6">
+            <h1 class="text-4xl m:text-5xl font-bold text-white whitespace-normal sm:whitespace-nowrap">
+              Welcome to
+              <br />
+              Green Cycle
+            </h1>
+            <div
+              class="flex justify-start items-center mt-4 p-4 bg-gradient-to-br from-lime-400 to-green-400 rounded-lg shadow-md h-10 w-[7.8rem] transition duration-300 ease-in-out lg:hover:scale-105">
+              <button class="text-lg font-medium text-white">
+                Let's work!
+              </button>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center -m-6">
+            <img class="w-[23rem] h-[25rem] object-cover" src="/public/assets/img/resoruce-01.png" alt="logo" />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-b from-gray-900 to-slate-800 rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-br w-full h-64">
+        <div class="flex flex-col justify-center gap-2 items-center text-center">
+          <div
+            class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
+            <ion-icon name="stats-chart" class="text-white text-3xl"></ion-icon>
+          </div>
+          <h1 class="text-2xl text-white font-semibold">Total Collections</h1>
+          <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
+            56
+          </h1>
+          <a href="#"
+            class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-br from-lime-400 to-green-400  text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
+            See More
+          </a>
+        </div>
+      </div>
 
 
+      <div
+        class="bg-gradient-to-b from-gray-900 to-slate-800 rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-br w-full h-64">
+        <div class="flex flex-col justify-center gap-2 items-center text-center">
+          <div
+            class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
+            <ion-icon name="document-text" class="text-white text-3xl"></ion-icon>
+          </div>
+          <h1 class="text-2xl text-white font-semibold">Completed</h1>
+          <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
+            24
+          </h1>
+          <a href="#"
+            class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-br from-lime-400 to-green-400  text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
+            See More
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-b from-gray-900 to-slate-800  rounded-lg shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-br w-full h-64">
+        <div class="flex flex-col justify-center items-center gap-2 text-center">
+          <div
+            class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
+            <ion-icon name="time" class="text-white text-3xl"></ion-icon>
+          </div>
+          <h1 class="text-2xl text-white font-semibold">In Progress</h1>
+          <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
+            16
+          </h1>
+          <a href="#"
+            class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-br from-lime-400 to-green-400  text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
+            See More
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-b from-gray-900 to-slate-800  shadow-md flex justify-center items-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-br w-full h-64 rounded-lg">
+        <div class="flex flex-col justify-center items-center gap-2 text-center">
+          <div
+            class="flex justify-center items-center bg-gradient-to-b from-lime-400 to-green-500 rounded-full w-14 h-14 mb-2">
+            <ion-icon name="leaf" class="text-white text-3xl"></ion-icon>
+          </div>
+          <h1 class="text-2xl text-white font-semibold">Actives</h1>
+          <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-lime-400 to-green-500">
+            4
+          </h1>
+          <a href="#"
+            class="flex justify-center items-center h-8 px-6 py-2 bg-gradient-to-br from-lime-400 to-green-400  text-white font-medium text-center rounded-lg shadow transition duration-300 ease-in-out">
+            See More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="/clientsFilter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
