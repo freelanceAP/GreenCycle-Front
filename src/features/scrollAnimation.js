@@ -17,6 +17,7 @@ AOS.init({
   easing: "ease-in-out", // Efecto de suavizado
   once: true,
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const loadingOverlay = document.getElementById("loading-overlay");
   const links = document.querySelectorAll(".loading-link"); // Seleccionar todos los enlaces con la clase 'loading-link'

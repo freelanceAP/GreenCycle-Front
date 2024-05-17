@@ -4,6 +4,15 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+
+.loader {
+  animation: spin 1.5s linear infinite;
+}
+
+.gradient-fill {
+  fill: url(#gradient);
+}
+
 .time-line::before {
   content: "";
   position: absolute;
