@@ -4,12 +4,15 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-.loader {
-  animation: spin 1.5s linear infinite;
-}
-
-.gradient-fill {
-  fill: url(#gradient);
+.time-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 45%;
+  width: 1px;
+  height: 280px;
+  background-color: #9ca3af;
+  z-index: -50;
 }
 
 ::-webkit-scrollbar {
@@ -22,13 +25,4 @@
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, #b6f04a, #2ccc5b);
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }

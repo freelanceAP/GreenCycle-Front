@@ -2,11 +2,24 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+    },
   },
   plugins: [
-    require("flowbite/plugin")({
+    require('flowbite/plugin')({
       charts: true,
     }),
+    function({ addUtilities }) {
+      addUtilities({
+        '.hide-scrollbar': {
+          '-webkit-overflow-scrolling': 'touch',
+          'scrollbar-width': 'none', 
+          '-ms-overflow-style': 'none', 
+        },
+        '.hide-scrollbar::-webkit-scrollbar': {
+          display: 'none'
+        }
+      }, ['responsive', 'hover']);
+    }
   ],
 };
