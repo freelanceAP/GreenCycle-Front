@@ -17,72 +17,79 @@
 <body class="bg-slate-800">
     <nav class="fixed top-0 z-40 w-full bg-gray-900 border-b border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center justify-start rtl:justify-end">
-              <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
-                type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-400 rounded-lg sm:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600">
-                <span class="sr-only">Open sidebar</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path clip-rule="evenodd" fill-rule="evenodd"
-                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-                  </path>
-                </svg>
-              </button>
-              <a href="" class="flex ms-2 md:me-24">
-                <img src="/public/assets/icons/isotipo-verde.svg" class="h-8 me-3" alt="Logo" />
-                <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">GreenCycle</span>
-              </a>
-            </div>
-            <div class="flex items-center">
-              <div class="flex items-center ms-3">
-                <div class="flex items-center space-x-4">
-                  <button type="button" class="flex-shrink-0 bg-gray-800 rounded-full focus:ring-4 focus:ring-lime-500"
-                    aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="w-8 h-8 rounded-full" src="/public/assets/img/client-pics-01.png" alt="user photo">
-                  </button>
-                  <!-- El texto solo será visible en tamaños md y superiores -->
-                  <div class="hidden md:block">
-                    <h2 class="text-white font-medium">Lorem Ipsum</h2>
-                    <h4 class="text-white text-xs font-light">Admin</h4>
-                  </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start rtl:justify-end">
+                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+                        aria-controls="logo-sidebar" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-400 rounded-lg sm:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                            </path>
+                        </svg>
+                    </button>
+                    <a href="/public/assets/pages/landingPage.html" class="flex ms-2 md:me-24">
+                        <img src="/public/assets/icons/isotipo-verde.svg" class="h-8 me-3" alt="Logo" />
+                        <span
+                            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">GreenCycle</span>
+                    </a>
                 </div>
-                <div class="z-50 hidden my-4 text-base list-none rounded-lg bg-gray-900 divide-y divide-gray-600"
-                  id="dropdown-user">
-                  <div class="px-4 py-3" role="none">
-                    <p class="text-sm text-white" role="none">
-                      Neil Sims
-                    </p>
-                    <p class="text-sm font-medium text-white truncate" role="none">
-                      neil.sims@flowbite.com
-                    </p>
-                  </div>
-                  <ul class="py-1" role="none">
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
-                        role="menuitem">Profile</a>
-                    </li>
-                    <li>
-                      <a href="/public/assets/pages/dashboard.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
-                        role="menuitem">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="/public/assets/pages/admin.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
-                        role="menuitem">Admin</a>
-                    </li>
-                    <li>
-                      <a href="/public/assets/pages/login.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
-                        role="menuitem">Log out</a>
-                    </li>
-                  </ul>
+                <div class="flex items-center">
+                    <div class="flex items-center ms-3">
+                        <div class="flex items-center space-x-4">
+                            <button type="button"
+                                class="flex-shrink-0 bg-gray-800 rounded-full focus:ring-4 focus:ring-lime-500"
+                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="w-8 h-8 rounded-full" src="/public/assets/img/client-pics-01.png"
+                                    alt="user photo">
+                            </button>
+                            <!-- El texto solo será visible en tamaños md y superiores -->
+                            <div class="hidden md:block">
+                                <h2 class="text-white font-medium">Lorem Ipsum</h2>
+                                <h4 class="text-white text-xs font-light">Admin</h4>
+                            </div>
+                        </div>
+                        <div class="z-50 hidden my-4 text-base list-none rounded-lg bg-gray-900 divide-y divide-gray-600"
+                            id="dropdown-user">
+                            <div class="px-4 py-3" role="none">
+                                <p class="text-sm text-white" role="none">
+                                    Neil Sims
+                                </p>
+                                <p class="text-sm font-medium text-white truncate" role="none">
+                                    neil.sims@flowbite.com
+                                </p>
+                            </div>
+                            <ul class="py-1" role="none">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                                        role="menuitem">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="/public/assets/pages/dashboard.html"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                                        role="menuitem">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="/public/assets/pages/admin.html"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                                        role="menuitem">Admin</a>
+                                </li>
+                                <li>
+                                    <a href="/public/assets/pages/login.html"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 dark:hover:text-white"
+                                        role="menuitem">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 
     <aside id="logo-sidebar"
         class="fixed top-0 left-0 z-30 w-60 h-screen pt-20 transition-transform -translate-x-full bg-gray-900 border-r border-gray-700 sm:translate-x-0"
@@ -125,7 +132,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/public/assets/pages/landingPage.html"
+                    <a href="/public/assets/pages/login.html"
                         class="flex items-center p-2 text-white hover:text-lime-400 transition duration-200">
                         <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
@@ -140,7 +147,7 @@
     </aside>
 
     <div id="content-container"
-        class="absolute inset-y-0 rtl:inset-r-0 start-0 z-10 pt-24 pl-72 pr-8 w-full flex flex-col justify-start items-center overflow-hidden">
+        class="absolute inset-y-0 rtl:inset-r-0 start-0 z-10 pt-24 pl-72 pr-8 w-full flex flex-col justify-start items-center overflow-hidden mb-16">
         <h1 class="flex justify-start mr-auto mb-1 font-semibold text-white text-5xl">Clients</h1>
         <p class="text-white font-light flex justify-start mr-auto mb-3">View and access all your client information in
             detail, including creating, searching, updating, and deleting</p>
@@ -191,12 +198,12 @@
                         placeholder="Search for users">
                 </div>
                 <div class="mr-5">
-                    <button
+                    <a href="#"
                         class="inline-flex items-center ml-5 text-white bg-green-500 focus:outline-none hover:bg-green-600 font-medium rounded-lg text-sm px-3 py-1.5"
-                        type="button">
-                        <span class="sr-only">Action button</span>
+                        data-modal-target="editUserModal" data-modal-show="editUserModal">
+                        <span class="sr-only">Create User</span>
                         Create User
-                    </button>
+                    </a>
                 </div>
             </div>
             <table class="w-full text-sm text-left rtl:text-right text-gray-500">
@@ -259,38 +266,8 @@
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
-        </div>
-        <!-- Pagination -->
-        <div class="fixed bottom-0 left-[70vh] w-full bg-white dark:bg-gray-800 py-4 shadow-md">
-            <div class="flex justify-center">
-                <nav aria-label="Page navigation example">
-                    <ul class="inline-flex -space-x-px">
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </div>
 
@@ -347,21 +324,6 @@
                             <input type="number" name="phone-number" id="phone-number"
                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="+(12)3456 789" required="">
-                        </div>
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="current-password"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address
-                            </label>
-                            <input type="password" name="current-password" id="current-password"
-                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Cra 1 #02-03" required="">
-                        </div>
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="new-password"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
-                            <input type="password" name="new-password" id="new-password"
-                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Medellín" required="">
                         </div>
                     </div>
                 </div>
