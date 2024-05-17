@@ -71,3 +71,4 @@ const options = {
     chart.render();
   }
   
+  document.getElementById('current-date').innerText = new Date().toLocaleDateString();
