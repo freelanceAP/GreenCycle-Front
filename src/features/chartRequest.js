@@ -72,3 +72,4 @@ const options = {
   }
   
   document.getElementById('current-date').innerText = new Date().toLocaleDateString();
+
