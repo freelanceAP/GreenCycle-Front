@@ -190,37 +190,6 @@
             <p class="flex flex-col mr-auto text-gray-200">Explore past requests for a clear overview of previous
                 interactions and activities.</p>
             <div class="flex mr-auto mt-7 items-center justify-start space-x-4 pb-4 bg-gray-800">
-                <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction"
-                    class="inline-flex items-center text-gray-400 bg-gray-800 border border-gray-600 focus:outline-none hover:bg-gray-700 focus:ring-4 focus:ring-gray-700 font-medium rounded-lg text-sm px-3 py-1.5"
-                    type="button">
-                    Action
-                    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 1 4 4 4-4" />
-                    </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="dropdownAction"
-                    class="z-10 hidden bg-gray-700 divide-y divide-gray-600 rounded-lg shadow w-44">
-                    <ul class="py-1 text-sm text-gray-200" aria-labelledby="dropdownActionButton">
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Reward</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Promote</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Activate account</a>
-                        </li>
-                    </ul>
-                    <div class="py-1">
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Delete
-                            User</a>
-                    </div>
-                </div>
-
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -241,13 +210,22 @@
                             Name
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Position
+                            Details
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Date
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Type
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Total KG
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Status
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Action
+                            Certificate
                         </th>
                     </tr>
                 </thead>
@@ -257,7 +235,16 @@
                             Neil Sims
                         </td>
                         <td class="px-6 py-4">
-                            React Developer
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </td>
+                        <td class="px-6 py-4">
+                            15/05/2024
+                        </td>
+                        <td class="px-6 py-4">
+                            Plastic
+                        </td>
+                        <td class="px-6 py-4">
+                            100
                         </td>
                         <td class="px-6 py-4">
                             <div class="flex items-center">
@@ -265,7 +252,8 @@
                             </div>
                         </td>
                         <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-white hover:underline">Edit user</a>
+                            <button data-modal-toggle="admin-modal" data-modal-target="admin-modal"
+                                class="font-medium text-green-500 hover:underline">Download</button>
                         </td>
                     </tr>
                     <tr class="bg-gray-900 border-b border-gray-800 hover:bg-gray-800">
@@ -273,7 +261,16 @@
                             Neil Sims
                         </td>
                         <td class="px-6 py-4">
-                            React Developer
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </td>
+                        <td class="px-6 py-4">
+                            15/05/2024
+                        </td>
+                        <td class="px-6 py-4">
+                            Wood
+                        </td>
+                        <td class="px-6 py-4">
+                            120
                         </td>
                         <td class="px-6 py-4">
                             <div class="flex items-center">
@@ -281,7 +278,8 @@
                             </div>
                         </td>
                         <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-white hover:underline">Edit user</a>
+                            <button data-modal-toggle="admin-modal" data-modal-target="admin-modal"
+                                class="font-medium text-green-500 hover:underline">Download</button>
                         </td>
                     </tr>
 
