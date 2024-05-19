@@ -1,6 +1,7 @@
 // Funcion asincronica para hacer la peticion y traer la informacion que rellena la grafica
-const tbody = document.querySelector("#lastRequests")
-console.log(tbody)
+const tbody1 = document.querySelector("#lastRequests")
+const tbody2 = document.querySelector("#tbAllRequests")
+
 
 //  Eventos
 getRequests()
@@ -8,7 +9,7 @@ getRequests()
 
 //  Funciones
 async function getDataMonths() {
-    const response = await fetch(`https://66483c022bb946cf2f9feebd.mockapi.io/api/v1/adminView_totalRequests`);
+    const response = await fetch(`https://greencycle-back-production.up.railway.app/api/v1/request/last-five-months`);
     const data = await response.json();
 
     // Extraigo de la data y mapeo la informacion agrupando por los valores que necesito
@@ -97,13 +98,14 @@ async function getRequests() {
     
     console.log(data);
     renderLastRequests(data.content);
+    renderAllRequests(data.content);
 }
 
 function renderLastRequests(requests) {
-    cleanTbody();
+    cleanTbody(tbody1);
 
-    requests.forEach((request) => {
-        tbody.innerHTML += `
+    requests.slice(0, 5).forEach((request) => {
+        tbody1.innerHTML += `
             <tr class="bg-gray-900 border-b border-gray-800 hover:bg-gray-800">
                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-normal break-words dark:text-white">
                     <img class="w-10 h-10 rounded-full" src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1223.jpg"> <!-- Reemplaza con la ruta correcta si tienes imágenes de avatar -->
@@ -171,11 +173,47 @@ function renderLastRequests(requests) {
     
 }
 
-function cleanTbody() {
-    while (tbody.firstChild) {
-        tbody.removeChild(tbody.firstChild)
+function renderAllRequests(requests) {
+    cleanTbody(tbody2);
+
+    requests.forEach((request) => {
+        tbody2.innerHTML += `
+        <tr class="bg-gray-900 border-b border-gray-800 hover:bg-gray-800">
+                        <td class="px-6 py-4 text-white whitespace-nowrap">
+                            ${request.user.userName}
+                        </td>
+                        <td class="px-6 py-4">
+                            ${request.description}
+                        </td>
+                        <td class="px-6 py-4">
+                            ${new Date(request.dateTime).toLocaleString()}
+                        </td>
+                        <td class="px-6 py-4">
+                            ${request.typeWaste}
+                        </td>
+                        <td class="px-6 py-4">
+                            ${request.quantityUnit}
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="h-2.5 w-2.5 rounded-full ~${request.status == "PENDING" ? "bg-orange-500" : "bg-green-500"} mr-2"></div> ${request.status}
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="font-medium text-green-500 hover:underline">Download</button>
+                        </td>
+                    </tr>
+        `;
+    });
+}
+
+function cleanTbody(body) {
+    console.log(body)
+    while (body.firstChild) {
+        body.removeChild(body.firstChild)
     }
 }
+
 
 
 // Llamo la funcion para cargar la grafica inmediatamente.
