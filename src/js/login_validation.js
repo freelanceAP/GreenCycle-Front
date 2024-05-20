@@ -24,19 +24,20 @@ async function handleLogin(e) {
     if (response.ok) {
       console.log('Inicio de sesión exitoso');
       const data = await response.json();
-       await console.log(data)
+      await console.log(data)
       const token = await data.accessToken;
-      const user =await awaitdata.user;
-      
+      const user = await data.user;
+
       localStorage.setItem('token', JSON.stringify(token));
       localStorage.setItem('user', JSON.stringify(user));
 
       // Verificar el role del usuario
       if (user && user.role) {
+
         if (user.role === 'admin') {
-          window.location.href = '../../public/assets/pages/dashboardAdmin.html';
+          window.location.href = '/public/assets/pages/dashboard.html';
         } else if (user.role === 'user') { // Asumiendo que 'user' corresponde al cliente
-          window.location.href = '../../public/assets/pages/dashboardClient.html';
+          window.location.href = '/public/assets/pages/dashboardClient.html';
         } else {
           console.error('Role de usuario no reconocido');
         }
