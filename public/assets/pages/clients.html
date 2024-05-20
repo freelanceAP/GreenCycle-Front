@@ -200,7 +200,7 @@
                 <div class="mr-5">
                     <a href="#"
                         class="inline-flex items-center ml-5 text-white bg-green-500 focus:outline-none hover:bg-green-600 font-medium rounded-lg text-sm px-3 py-1.5"
-                        data-modal-target="editUserModal" data-modal-show="editUserModal">
+                        data-modal-target="createUserModal" data-modal-show="createUserModal">
                         <span class="sr-only">Create User</span>
                         Create User
                     </a>
@@ -262,7 +262,7 @@
                         </td>
                         <td class="px-6 py-4">
                             <!-- Modal toggle -->
-                            <a href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal"
+                            <a href="#" type="button" 
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                         </td>
                     </tr>
@@ -271,8 +271,8 @@
         </div>
     </div>
 
-    <!-- Edit user modal -->
-    <div id="editUserModal" tabindex="-1" aria-hidden="true"
+    <!-- Create user modal -->
+    <div id="createUserModal" tabindex="-1" aria-hidden="true"
         class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-2xl max-h-full">
             <!-- Modal content -->
@@ -284,7 +284,7 @@
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-hide="editUserModal">
+                        data-modal-hide="createUserModal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -338,9 +338,9 @@
         </div>
     </div>>
 
-    <script src="/clientsFilter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script type="module" src="/src/js/clientsView.js"></script>
+    <script src="../../../node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>

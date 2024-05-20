@@ -1,18 +1,35 @@
+//  Importo el URLbase para no hacer tan largas las URLS y poder cambiar desde solo una parte la URL
+import { URLbase } from './app.js';
+
 // Funcion asincronica para hacer la peticion y traer la informacion que rellena la grafica
 const tbody1 = document.querySelector("#lastRequests")
 const tbody2 = document.querySelector("#tbAllRequests")
 
-
+//
 //  Eventos
+//
+
+//  Llamo la funcion para obtener las solicitudes. 
 getRequests()
+// Llamo la funcion para cargar la grafica inmediatamente.
+getDataMonths();
 
-
+//
 //  Funciones
+//
+
+//  Funcion que carga la informacion de la grafica.
 async function getDataMonths() {
-    const response = await fetch(`https://greencycle-back-production.up.railway.app/api/v1/request/last-five-months`);
+    const response = await fetch(URLbase+`request/last-five-months`);
     const data = await response.json();
 
-    // Extraigo de la data y mapeo la informacion agrupando por los valores que necesito
+    // Define el orden de los meses
+    const monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    // Ordena la data según el orden de los meses
+    data.sort((a, b) => monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month));
+
+    // Extrae de la data y mapea la información agrupando por los valores que necesitas
     const totalRequests = data.map(item => item.totalRequests);
     const months = data.map(item => item.month);
 
@@ -92,15 +109,17 @@ async function getDataMonths() {
 
     return data;
 }
+
+// Funcion que obtiene las solicitudes y llama las funciones de renderización.
 async function getRequests() {
-    const response = await fetch(`https://greencycle-back-production.up.railway.app/api/v1/request`);
+    const response = await fetch(URLbase+`request`);
     const data = await response.json();
     
     console.log(data);
     renderLastRequests(data.content);
     renderAllRequests(data.content);
-}
-
+} 
+//  Funcion para renderizar las ultimas 5 solicitudes.
 function renderLastRequests(requests) {
     cleanTbody(tbody1);
 
@@ -150,20 +169,56 @@ function renderLastRequests(requests) {
                                         <button class="absolute time-line flex items-center justify-center w-6 h-6 bg-gray-400 rounded-full -start-3.5 ring-8 ring-gray-400 hover:bg-gray-500 transition text-white">
                                             <ion-icon name="time"></ion-icon>
                                         </button>
-                                        <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-400">Pending</h3>
-                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released on ${new Date(request.dateTime).toLocaleString()}</time>
+                                        <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-400">
+                                            Pending
+                                        </h3>
+                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                                            on January 13th, 2022</time>
                                     </li>
-                                    <!-- Puedes agregar más estados según lo necesites -->
+                                    <li class="mb-10 ms-8">
+                                        <button
+                                            class="absolute flex items-center justify-center w-6 h-6 bg-gray-400 rounded-full -start-3.5 ring-8 ring-gray-400 hover:bg-gray-500 transition text-white">
+                                            <ion-icon name="cube"></ion-icon>
+                                        </button>
+                                        <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-400">
+                                            In Collection
+                                        </h3>
+                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                                            on January 13th, 2022</time>
+                                    </li>
+                                    <li class="mb-10 ms-8">
+                                        <button
+                                            class="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -start-3.5 ring-8 ring-green-500 hover:bg-green-600 transition text-white">
+                                            <ion-icon name="sync"></ion-icon>
+                                        </button>
+                                        <h3 class="flex items-start mb-1 text-lg font-semibold text-green-500">
+                                            In Progress
+                                        </h3>
+                                        <time class="block mb-2 text-sm font-normal leading-none text-white">Released
+                                            on January 13th, 2022</time>
+                                    </li>
+                                    <li class="mb-10  ms-8">
+                                        <button
+                                            class="absolute flex items-center justify-center w-6 h-6 bg-gray-400 rounded-full -start-3.5 ring-8 ring-gray-400 hover:bg-gray-500 transition text-white">
+                                            <ion-icon name="checkmark-done"></ion-icon>
+                                        </button>
+                                        <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-400">
+                                            Completed
+                                        </h3>
+                                        <time class="block mb-2 text-sm font-normal text-gray-400">Released
+                                            on January 13th, 2022</time>
+                                    </li>
                                 </ol>
                                 <button class="z-50 text-white inline-flex w-full justify-center bg-green-500 mb-7 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     Download Certificate
                                 </button>
                             </div>
+                            <button type="button" class="text-gray-400 bg-transparent hover:text-white rounded-lg text-3xl h-8 w-8 inline-flex justify-center items-center absolute right-4 top-4" data-modal-toggle="admin-modal-${request.id}" id="closeModalBtn">
+                                <ion-icon name="close-outline"></ion-icon>
+                                <span class="sr-only">Close modal</span>
+                            </button>
                         </div>
-                        <button type="button" class="text-gray-400 bg-transparent hover:text-white rounded-lg text-3xl h-8 w-8 inline-flex justify-center items-center absolute right-4 top-4" data-modal-toggle="admin-modal-${request.id}" id="closeModalBtn">
-                            <ion-icon name="close-outline"></ion-icon>
-                            <span class="sr-only">Close modal</span>
-                        </button>
+                        
                     </div>
                 </div>
             </div>
@@ -172,7 +227,7 @@ function renderLastRequests(requests) {
 
     
 }
-
+// Funcion para renderizar todas las solicitudes.
 function renderAllRequests(requests) {
     cleanTbody(tbody2);
 
@@ -205,8 +260,21 @@ function renderAllRequests(requests) {
                     </tr>
         `;
     });
-}
 
+     // Re-initialize modals if Flowbite is available
+     if (typeof Flowbite !== 'undefined') {
+        document.querySelectorAll('[data-modal-toggle]').forEach(button => {
+            const modalId = button.getAttribute('data-modal-toggle');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                button.addEventListener('click', () => {
+                    modal.classList.toggle('hidden');
+                });
+            }
+        });
+    }
+}
+//  Funciona para eliminar la informacion de los Tbody.
 function cleanTbody(body) {
     console.log(body)
     while (body.firstChild) {
@@ -215,6 +283,3 @@ function cleanTbody(body) {
 }
 
 
-
-// Llamo la funcion para cargar la grafica inmediatamente.
-getDataMonths();
