@@ -35,3 +35,7 @@
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, #b6f04a, #2ccc5b);
 }
+
+.menu-item:focus {
+  @apply text-lime-400;
+}
