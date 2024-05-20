@@ -1,3 +1,20 @@
+// Función para verificar si el usuario está autenticado
+function isAuthenticated() {
+  const token = localStorage.getItem('token');
+  return token !== null;
+}
+
+// Función para redirigir al usuario a la página de inicio de sesión si no está autenticado
+function protectRoute() {
+  if (!isAuthenticated()) {
+    window.location.href = '/public/assets/pages/login.html'; // Ruta a tu página de inicio de sesión
+  }
+}
+
+// Proteger rutas llamando a esta función en las páginas que deseas proteger
+protectRoute();
+
+// Lógica de inicio de sesión
 const loginBtn = document.getElementById('loginBtn');
 
 loginBtn.addEventListener('click', handleLogin);
@@ -24,16 +41,14 @@ async function handleLogin(e) {
     if (response.ok) {
       console.log('Inicio de sesión exitoso');
       const data = await response.json();
-      await console.log(data)
-      const token = await data.accessToken;
-      const user = await data.user;
+      const token = data.accessToken;
+      const user = data.user;
 
       localStorage.setItem('token', JSON.stringify(token));
       localStorage.setItem('user', JSON.stringify(user));
 
       // Verificar el role del usuario
       if (user && user.role) {
-
         if (user.role === 'admin') {
           window.location.href = '/public/assets/pages/dashboard.html';
         } else if (user.role === 'user') { // Asumiendo que 'user' corresponde al cliente
