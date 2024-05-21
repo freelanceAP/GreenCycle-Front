@@ -1,8 +1,10 @@
-Web Layout Design
+<div style="text-align: center;">
+  <img src="/public/assets/icons/GrenCycle logo.svg" alt="Project Logo">
+</div>
 
----
+# Frontend Project
 
-AdminView:
+## Layout Design
 
 ---
 
@@ -16,14 +18,16 @@ ClientView:
 
 ---
 
+## Technologies used:
 
-Technologies used:
+- HTML5
+- CSS3
+- Tailwind CSS
+- Flowbite
 
-HTML5
-CSS3
-Tailwind CSS
-Flowbite
-
----
+## Frontend Initialization
 
 To initialize the frontend, it is not necessary to run commands or start any server, as we try to use as much vanilla as possible to reinforce basic knowledge.
+
+
+
