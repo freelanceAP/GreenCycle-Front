@@ -4,7 +4,7 @@
     font-family: "Ubuntu", sans-serif;
 }
 body{
-    background-image: url(/public/assets/img/bg-login.webp);
+    background-image: url(/public/assets/img/bg_login.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
