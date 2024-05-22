@@ -12,7 +12,7 @@ function protectRoute() {
 }
 
 // Proteger rutas llamando a esta función en las páginas que deseas proteger
-protectRoute();
+
 
 // Lógica de inicio de sesión
 const loginBtn = document.getElementById('loginBtn');
